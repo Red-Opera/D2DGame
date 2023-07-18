@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Animation>
+  <SomeTexture Name="HpBar" Type="0" TexturePath="Assets/Texture/HPManaBar.png" TextureSizeX="600" TextureSizeY="234">
+    <Keyframe OffsetX="0" OffsetY="0" SizeX="600" SizeY="67" Time="10000"/>
+  </SomeTexture>
+
+  <SomeTexture Name="ManaBar" Type="0" TexturePath="Assets/Texture/HPManaBar.png" TextureSizeX="600" TextureSizeY="234">
+    <Keyframe OffsetX="0" OffsetY="88" SizeX="600" SizeY="78" Time="10000"/>
+  </SomeTexture>
+
+  <SomeTexture Name="HpGauge" Type="0" TexturePath="Assets/Texture/HPManaBar.png" TextureSizeX="600" TextureSizeY="234">
+    <Keyframe OffsetX="0" OffsetY="200" SizeX="111" SizeY="34" Time="10000"/>
+  </SomeTexture>
+
+  <SomeTexture Name="ManaGauge" Type="0" TexturePath="Assets/Texture/HPManaBar.png" TextureSizeX="600" TextureSizeY="234">
+    <Keyframe OffsetX="120" OffsetY="200" SizeX="111" SizeY="34" Time="10000"/>
+  </SomeTexture>
+</Animation>

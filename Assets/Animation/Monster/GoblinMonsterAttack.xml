@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Animation>
+  <Move Name="GoblinRightAttack" Type="1" TexturePath="Assets/Texture/Goblin.png" TextureSizeX="640" TextureSizeY="320">
+    <Keyframe OffsetX="0" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+    <Keyframe OffsetX="32" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+    <Keyframe OffsetX="64" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+    <Keyframe OffsetX="96" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+    <Keyframe OffsetX="128" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+    <Keyframe OffsetX="160" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+    <Keyframe OffsetX="192" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+    <Keyframe OffsetX="224" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+    <Keyframe OffsetX="256" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+    <Keyframe OffsetX="288" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+  </Move>
+
+  <Move Name="GoblinLeftAttack" Type="1" TexturePath="Assets/Texture/Goblin.png" TextureSizeX="640" TextureSizeY="320">
+    <Keyframe OffsetX="608" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+    <Keyframe OffsetX="576" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+    <Keyframe OffsetX="544" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+    <Keyframe OffsetX="512" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+    <Keyframe OffsetX="480" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+    <Keyframe OffsetX="448" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+    <Keyframe OffsetX="416" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+    <Keyframe OffsetX="384" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+    <Keyframe OffsetX="352" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+    <Keyframe OffsetX="320" OffsetY="266" SizeX="32" SizeY="24" Time="100"/>
+  </Move>
+</Animation>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Animation>
+  <Move Name="BackMove" Type="1" TexturePath="Assets/Texture/player.png" TextureSizeX="1500" TextureSizeY="2000">
+    <Keyframe OffsetX="0" OffsetY="0" SizeX="180" SizeY="300" Time="150"/>
+    <Keyframe OffsetX="1000" OffsetY="0" SizeX="180" SizeY="300" Time="150"/>
+    <Keyframe OffsetX="0" OffsetY="0" SizeX="180" SizeY="300" Time="150"/>
+    <Keyframe OffsetX="1200" OffsetY="0" SizeX="180" SizeY="300" Time="150"/>
+  </Move>
+
+  <Move Name="LeftMove" Type="1" TexturePath="Assets/Texture/player.png" TextureSizeX="1500" TextureSizeY="2000">
+    <Keyframe OffsetX="0" OffsetY="350" SizeX="180" SizeY="300" Time="150"/>
+    <Keyframe OffsetX="1000" OffsetY="350" SizeX="180" SizeY="300" Time="150"/>
+    <Keyframe OffsetX="0" OffsetY="350" SizeX="180" SizeY="300" Time="150"/>
+    <Keyframe OffsetX="1200" OffsetY="350" SizeX="180" SizeY="300" Time="150"/>
+  </Move>
+
+  <Move Name="RightMove" Type="1" TexturePath="Assets/Texture/player.png" TextureSizeX="1500" TextureSizeY="2000">
+    <Keyframe OffsetX="0" OffsetY="700" SizeX="180" SizeY="300" Time="150"/>
+    <Keyframe OffsetX="1000" OffsetY="700" SizeX="180" SizeY="300" Time="150"/>
+    <Keyframe OffsetX="0" OffsetY="700" SizeX="180" SizeY="300" Time="150"/>
+    <Keyframe OffsetX="1200" OffsetY="700" SizeX="180" SizeY="300" Time="150"/>
+  </Move>
+
+  <Move Name="FrontMove" Type="1" TexturePath="Assets/Texture/player.png" TextureSizeX="1500" TextureSizeY="2000">
+    <Keyframe OffsetX="0" OffsetY="1050" SizeX="180" SizeY="300" Time="150"/>
+    <Keyframe OffsetX="1000" OffsetY="1050" SizeX="180" SizeY="300" Time="150"/>
+    <Keyframe OffsetX="0" OffsetY="1050" SizeX="180" SizeY="300" Time="150"/>
+    <Keyframe OffsetX="1200" OffsetY="1050" SizeX="180" SizeY="300" Time="150"/>
+  </Move>
+</Animation>

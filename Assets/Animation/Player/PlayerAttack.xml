@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Animation>
+  <Attack Name="LeftAttack" Type="0" TexturePath="Assets/Texture/playerSword.png" TextureSizeX="1050" TextureSizeY="930">
+    <Keyframe OffsetX="0" OffsetY="0" SizeX="125" SizeY="270" Time="50"/>
+    <Keyframe OffsetX="125" OffsetY="0" SizeX="125" SizeY="270" Time="50"/>
+    <Keyframe OffsetX="250" OffsetY="0" SizeX="125" SizeY="270" Time="50"/>
+    <Keyframe OffsetX="375" OffsetY="0" SizeX="125" SizeY="270" Time="50"/>
+    <Keyframe OffsetX="500" OffsetY="0" SizeX="125" SizeY="270" Time="50"/>
+    <Keyframe OffsetX="625" OffsetY="0" SizeX="125" SizeY="270" Time="50"/>
+    <Keyframe OffsetX="750" OffsetY="0" SizeX="125" SizeY="270" Time="50"/>
+  </Attack>
+
+  <Attack Name="RightAttack" Type="0" TexturePath="Assets/Texture/playerSword.png" TextureSizeX="1050" TextureSizeY="930">
+    <Keyframe OffsetX="750" OffsetY="270" SizeX="125" SizeY="270" Time="50"/>
+    <Keyframe OffsetX="625" OffsetY="270" SizeX="125" SizeY="270" Time="50"/>
+    <Keyframe OffsetX="500" OffsetY="270" SizeX="125" SizeY="270" Time="50"/>
+    <Keyframe OffsetX="375" OffsetY="270" SizeX="125" SizeY="270" Time="50"/>
+    <Keyframe OffsetX="250" OffsetY="270" SizeX="125" SizeY="270" Time="50"/>
+    <Keyframe OffsetX="125" OffsetY="270" SizeX="125" SizeY="270" Time="50"/>
+    <Keyframe OffsetX="0" OffsetY="270" SizeX="125" SizeY="270" Time="50"/>
+  </Attack>
+
+  <Attack Name="FrontAttack" Type="0" TexturePath="Assets/Texture/playerSword.png" TextureSizeX="1050" TextureSizeY="930">
+    <Keyframe OffsetX="900" OffsetY="540" SizeX="150" SizeY="125" Time="50"/>
+    <Keyframe OffsetX="750" OffsetY="540" SizeX="150" SizeY="125" Time="50"/>
+    <Keyframe OffsetX="600" OffsetY="540" SizeX="150" SizeY="125" Time="50"/>
+    <Keyframe OffsetX="450" OffsetY="540" SizeX="150" SizeY="125" Time="50"/>
+    <Keyframe OffsetX="300" OffsetY="540" SizeX="150" SizeY="125" Time="50"/>
+    <Keyframe OffsetX="150" OffsetY="540" SizeX="150" SizeY="125" Time="50"/>
+    <Keyframe OffsetX="0" OffsetY="540" SizeX="150" SizeY="125" Time="50"/>
+  </Attack>
+
+  <Attack Name="BackAttack" Type="0" TexturePath="Assets/Texture/playerSword.png" TextureSizeX="1050" TextureSizeY="930">
+    <Keyframe OffsetX="900" OffsetY="665" SizeX="150" SizeY="125" Time="50"/>
+    <Keyframe OffsetX="750" OffsetY="665" SizeX="150" SizeY="125" Time="50"/>
+    <Keyframe OffsetX="600" OffsetY="665" SizeX="150" SizeY="125" Time="50"/>
+    <Keyframe OffsetX="450" OffsetY="665" SizeX="150" SizeY="125" Time="50"/>
+    <Keyframe OffsetX="150" OffsetY="665" SizeX="150" SizeY="125" Time="50"/>
+    <Keyframe OffsetX="300" OffsetY="665" SizeX="150" SizeY="125" Time="50"/>
+    <Keyframe OffsetX="0" OffsetY="665" SizeX="150" SizeY="125" Time="50"/>
+  </Attack>
+</Animation>

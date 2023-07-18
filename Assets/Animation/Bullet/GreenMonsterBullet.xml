@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Animation>
+  <Move Name="GreenMonsterBulletStart" Type="1" TexturePath="Assets/Texture/GreenMonsterBullet.png" TextureSizeX="768" TextureSizeY="288">
+    <Keyframe OffsetX="33" OffsetY="36" SizeX="30" SizeY="24" Time="75"/>
+    <Keyframe OffsetX="96" OffsetY="36" SizeX="36" SizeY="24" Time="75"/>
+    <Keyframe OffsetX="168" OffsetY="39" SizeX="51" SizeY="21" Time="75"/>
+  </Move>
+  
+  <Move Name="GreenMonsterBullet" Type="1" TexturePath="Assets/Texture/GreenMonsterBullet.png" TextureSizeX="768" TextureSizeY="288">
+    <Keyframe OffsetX="255" OffsetY="39" SizeX="69" SizeY="21" Time="100"/>
+    <Keyframe OffsetX="351" OffsetY="39" SizeX="69" SizeY="21" Time="100"/>
+    <Keyframe OffsetX="453" OffsetY="39" SizeX="69" SizeY="21" Time="100"/>
+  </Move>
+  
+  <Move Name="GreenMonsterBulletEnd" Type="1" TexturePath="Assets/Texture/GreenMonsterBullet.png" TextureSizeX="768" TextureSizeY="288">
+    <Keyframe OffsetX="639" OffsetY="39" SizeX="36" SizeY="21" Time="75"/>
+    <Keyframe OffsetX="708" OffsetY="36" SizeX="24" SizeY="27" Time="75"/>
+  </Move>
+</Animation>

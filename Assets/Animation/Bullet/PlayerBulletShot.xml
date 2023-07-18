@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Animation>
+  <Bullet Name="Bullet" Type="0" TexturePath="Assets/Texture/PlayerBullet.png" TextureSizeX="16" TextureSizeY="16">
+    <Keyframe OffsetX="0" OffsetY="0" SizeX="16" SizeY="16" Time="10000"/>
+  </Bullet>
+</Animation>

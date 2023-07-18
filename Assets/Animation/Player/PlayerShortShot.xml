@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Animation>
+  <Attack Name="RightShortShot" Type="0" TexturePath="Assets/Texture/PlayerShot.png" TextureSizeX="840" TextureSizeY="960">
+    <Keyframe OffsetX="360" OffsetY="0" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="240" OffsetY="0" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="120" OffsetY="0" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="0" OffsetY="0" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="480" OffsetY="0" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="600" OffsetY="0" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="740" OffsetY="0" SizeX="120" SizeY="120" Time="50"/>
+  </Attack>
+
+  <Attack Name="LeftShortShot" Type="0" TexturePath="Assets/Texture/PlayerShot.png" TextureSizeX="840" TextureSizeY="960">
+    <Keyframe OffsetX="0" OffsetY="240" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="120" OffsetY="240" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="240" OffsetY="240" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="360" OffsetY="240" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="480" OffsetY="240" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="600" OffsetY="240" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="740" OffsetY="240" SizeX="120" SizeY="120" Time="50"/>
+  </Attack>
+
+  <Attack Name="FrontShortShot" Type="0" TexturePath="Assets/Texture/PlayerShot.png" TextureSizeX="840" TextureSizeY="960">
+    <Keyframe OffsetX="0" OffsetY="480" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="120" OffsetY="480" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="240" OffsetY="480" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="360" OffsetY="480" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="480" OffsetY="480" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="600" OffsetY="480" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="740" OffsetY="480" SizeX="120" SizeY="120" Time="50"/>
+  </Attack>
+
+  <Attack Name="BackShortShot" Type="0" TexturePath="Assets/Texture/PlayerShot.png" TextureSizeX="840" TextureSizeY="960">
+    <Keyframe OffsetX="0" OffsetY="720" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="120" OffsetY="720" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="240" OffsetY="720" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="360" OffsetY="720" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="480" OffsetY="720" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="600" OffsetY="720" SizeX="120" SizeY="120" Time="50"/>
+    <Keyframe OffsetX="740" OffsetY="720" SizeX="120" SizeY="120" Time="50"/>
+  </Attack>
+</Animation>

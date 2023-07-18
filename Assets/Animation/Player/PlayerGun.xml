@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Animation>
+  <Gun Name="Gun" Type="0" TexturePath="Assets/Texture/PlayerGun.png" TextureSizeX="125" TextureSizeY="83">
+    <Keyframe OffsetX="0" OffsetY="0" SizeX="125" SizeY="83" Time="10000"/>
+  </Gun>
+</Animation>

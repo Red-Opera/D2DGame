@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Animation>
+  <KeyBoardPress Name="YW" Type="0" TexturePath="Assets/Texture/PressKeyBoard.png" TextureSizeX="768" TextureSizeY="1344">
+    <Keyframe OffsetX="576" OffsetY="1056" SizeX="96" SizeY="96" Time="10000"/>
+  </KeyBoardPress>
+
+  <KeyBoardPress Name="YA" Type="0" TexturePath="Assets/Texture/PressKeyBoard.png" TextureSizeX="768" TextureSizeY="1344">
+    <Keyframe OffsetX="0" OffsetY="864" SizeX="96" SizeY="96" Time="10000"/>
+  </KeyBoardPress>
+
+  <KeyBoardPress Name="YS" Type="0" TexturePath="Assets/Texture/PressKeyBoard.png" TextureSizeX="768" TextureSizeY="1344">
+    <Keyframe OffsetX="192" OffsetY="1056" SizeX="96" SizeY="96" Time="10000"/>
+  </KeyBoardPress>
+
+  <KeyBoardPress Name="YD" Type="0" TexturePath="Assets/Texture/PressKeyBoard.png" TextureSizeX="768" TextureSizeY="1344">
+    <Keyframe OffsetX="288" OffsetY="864" SizeX="96" SizeY="96" Time="10000"/>
+  </KeyBoardPress>
+
+  <KeyBoardPress Name="YC" Type="0" TexturePath="Assets/Texture/PressKeyBoard.png" TextureSizeX="768" TextureSizeY="1344">
+    <Keyframe OffsetX="192" OffsetY="864" SizeX="96" SizeY="96" Time="10000"/>
+  </KeyBoardPress>
+
+  <KeyBoardPress Name="Y1" Type="0" TexturePath="Assets/Texture/PressKeyBoard.png" TextureSizeX="768" TextureSizeY="1344">
+    <Keyframe OffsetX="384" OffsetY="672" SizeX="96" SizeY="96" Time="10000"/>
+  </KeyBoardPress>
+
+  <KeyBoardPress Name="Y2" Type="0" TexturePath="Assets/Texture/PressKeyBoard.png" TextureSizeX="768" TextureSizeY="1344">
+    <Keyframe OffsetX="480" OffsetY="672" SizeX="96" SizeY="96" Time="10000"/>
+  </KeyBoardPress>
+  
+  <KeyBoardPress Name="NW" Type="0" TexturePath="Assets/Texture/PressKeyBoard.png" TextureSizeX="768" TextureSizeY="1344">
+    <Keyframe OffsetX="576" OffsetY="384" SizeX="96" SizeY="96" Time="10000"/>
+  </KeyBoardPress>
+
+  <KeyBoardPress Name="NA" Type="0" TexturePath="Assets/Texture/PressKeyBoard.png" TextureSizeX="768" TextureSizeY="1344">
+    <Keyframe OffsetX="0" OffsetY="192" SizeX="96" SizeY="96" Time="10000"/>
+  </KeyBoardPress>
+
+  <KeyBoardPress Name="NS" Type="0" TexturePath="Assets/Texture/PressKeyBoard.png" TextureSizeX="768" TextureSizeY="1344">
+    <Keyframe OffsetX="192" OffsetY="384" SizeX="96" SizeY="96" Time="10000"/>
+  </KeyBoardPress>
+
+  <KeyBoardPress Name="ND" Type="0" TexturePath="Assets/Texture/PressKeyBoard.png" TextureSizeX="768" TextureSizeY="1344">
+    <Keyframe OffsetX="288" OffsetY="192" SizeX="96" SizeY="96" Time="10000"/>
+  </KeyBoardPress>
+
+  <KeyBoardPress Name="NC" Type="0" TexturePath="Assets/Texture/PressKeyBoard.png" TextureSizeX="768" TextureSizeY="1344">
+    <Keyframe OffsetX="192" OffsetY="192" SizeX="96" SizeY="96" Time="10000"/>
+  </KeyBoardPress>
+
+  <KeyBoardPress Name="N1" Type="0" TexturePath="Assets/Texture/PressKeyBoard.png" TextureSizeX="768" TextureSizeY="1344">
+    <Keyframe OffsetX="384" OffsetY="0" SizeX="96" SizeY="96" Time="10000"/>
+  </KeyBoardPress>
+
+  <KeyBoardPress Name="N2" Type="0" TexturePath="Assets/Texture/PressKeyBoard.png" TextureSizeX="768" TextureSizeY="1344">
+    <Keyframe OffsetX="480" OffsetY="0" SizeX="96" SizeY="96" Time="10000"/>
+  </KeyBoardPress>
+  
+</Animation>

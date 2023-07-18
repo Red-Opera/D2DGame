@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Animation>
+  <MouseUI Name="NoPress" Type="0" TexturePath="Assets/Texture/mouse.png" TextureSizeX="300" TextureSizeY="210">
+    <Keyframe OffsetX="0" OffsetY="0" SizeX="138" SizeY="208" Time="10000"/>
+  </MouseUI>
+
+  <MouseUI Name="Press" Type="0" TexturePath="Assets/Texture/mouse.png" TextureSizeX="300" TextureSizeY="210">
+    <Keyframe OffsetX="150" OffsetY="0" SizeX="138" SizeY="208" Time="10000"/>
+  </MouseUI>
+</Animation>
