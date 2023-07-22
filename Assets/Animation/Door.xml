@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Animation>
-  <Door Name="WoodDoor" Type="0" TexturePath="Assets/Texture/Door.png" TextureSizeX="384" TextureSizeY="512">
-    <Keyframe OffsetX="0" OffsetY="0" SizeX="32" SizeY="64" Time="150"/>
-    <Keyframe OffsetX="0" OffsetY="68" SizeX="32" SizeY="64" Time="150"/>
-    <Keyframe OffsetX="0" OffsetY="136" SizeX="32" SizeY="64" Time="150"/>
-  </Door>
-</Animation>

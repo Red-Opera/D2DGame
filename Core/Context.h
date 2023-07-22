@@ -42,7 +42,7 @@ public:
 		return static_cast<T*>(subSystems.back());
 	}
 
-	// 타입을 입력하여 타입 ID값으로 해당 객체를 가져오는 함수
+	// 타입을 입력하여 타입 ID값으로 해당 객체를 가져오는 함수q
 	template<typename T>
 	T* const GetSubSystem() 
 	{

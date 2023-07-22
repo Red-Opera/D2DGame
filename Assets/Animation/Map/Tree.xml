@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Animation>
+  <SomeTexture Name="NormalTree" Type="0" TexturePath="Assets/Texture/Tree.png" TextureSizeX="64" TextureSizeY="64">
+    <Keyframe OffsetX="0" OffsetY="0" SizeX="64" SizeY="64" Time="10000"/>
+  </SomeTexture>
+</Animation>

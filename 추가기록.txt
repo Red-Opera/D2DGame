@@ -16,3 +16,24 @@
 2023-02-25 (18일차) : 플레이어 단거리 공격 모션 완성
 
 // 미구현 : 적 캐릭터 생성, 적 캐릭터 이동 구현, 캐릭터 및 적 공격 처리, 사운드 처리, Scene이동 처리, 탈 것 처리
+
+마우스 클릭 이미지 : https://creazilla.com/ko/nodes/1579-vector
+하트 이미지 : https://pixabay.com/sv/illustrations/pixel-hj%C3%A4rta-hj%C3%A4rta-pixel-symbol-2779422/
+마나 이미지 : https://pixabay.com/de/illustrations/trank-reagenzglas-elixier-mischung-7265174/
+문 이미지 : https://opengameart.org/content/lpc-door-rework
+울타리 이미지 : https://opengameart.org/content/16x16-fence-and-well-tiny-16
+나무 이미지 : https://opengameart.org/content/mountain-hause-and-trees
+오른쪽 집 이미지 : https://opengameart.org/content/shabby-chic-exterior-tiles
+왼쪽 집 이미지 : https://opengameart.org/content/lpc-victorian-buildings
+플레이어 이미지 : https://publicdomainvectors.org/en/free-clipart/Retro-character-vector-clip-art/27536.html
+키보드 이미지 : https://dreammix.itch.io/keyboard-keys-for-ui
+슬라임 이미지 : https://opengameart.org/content/animated-slime
+고블린 이미지 : https://opengameart.org/content/animated-goblins
+총, 총알 이미지 : https://opengameart.org/content/2d-guns
+랜턴 이미지 : <a href="https://www.pngkit.com/view/u2q8t4e6w7q8e6a9_lamp-post-clipart-pixel-art-pixel-lamp-post/" target="_blank">Lamp Post Clipart Pixel Art - Pixel Lamp Post @pngkit.com</a>
+칼 이미지 : https://opengameart.org/content/scimitar-sword
+칼 이펙트 이미지 : https://opengameart.org/content/weapon-slash-effect 
+타일셋 이미지 : https://opengameart.org/content/sunny-and-strata-tilesets
+흙길, 배경 이미지 : https://opengameart.org/content/outdoors-tileset
+꽃 이미지 : https://opengameart.org/content/pixel-land-15
+슬라임 총알 이미지 : https://www.doomworld.com/forum/topic/73426-share-your-sprites/?page=27

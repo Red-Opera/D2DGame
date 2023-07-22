@@ -97,7 +97,7 @@ Scene::Scene(class Context* const context) : context(context)
 
 	auto leftDoorTexture = leftDoor->AddComponent<AnimatorComponent>();
 	leftDoorTexture->SetAnimationFrameName(1, "WoodDoor");
-	leftDoorTexture->AddAnimation("Assets/Animation/Door.xml");
+	leftDoorTexture->AddAnimation("Assets/Animation/Map/Door.xml");
 	leftDoor->SetName("LeftWoodDoor");
 
 	leftDoorTexture->SetCurrentAnimation("WoodDoor");
@@ -112,7 +112,7 @@ Scene::Scene(class Context* const context) : context(context)
 
 	auto rightDoorTexture = rightDoor->AddComponent<AnimatorComponent>();
 	rightDoorTexture->SetAnimationFrameName(1, "WoodDoor");
-	rightDoorTexture->AddAnimation("Assets/Animation/Door.xml");
+	rightDoorTexture->AddAnimation("Assets/Animation/Map/Door.xml");
 	rightDoor->SetName("RightWoodDoor");
 
 	rightDoorTexture->SetCurrentAnimation("WoodDoor");
@@ -129,10 +129,10 @@ Scene::Scene(class Context* const context) : context(context)
 	auto fence3Texture = fence3->AddComponent<BackGroundComponent>();
 
 	fence3Texture->SetTexture("Assets/Texture/fence3.png");
-	fence3Texture->GetTexture()->FullSize(false, 10.0f, 159.0f);
+	fence3Texture->GetTexture()->FullSize(false, 14.0f, 159.0f);
 
-	fence3->GetComponent<TransformComponent>()->SetScale(D3DXVECTOR3(25.0f, 375.0f, 1.0f));
-	fence3->GetComponent<TransformComponent>()->SetPosition(D3DXVECTOR3(-480.0f, 375.0f, 0.0f));
+	fence3->GetComponent<TransformComponent>()->SetScale(D3DXVECTOR3(35.0f, 375.0f, 1.0f));
+	fence3->GetComponent<TransformComponent>()->SetPosition(D3DXVECTOR3(-483.0f, 375.0f, 0.0f));
 
 	// 4번째 울타리
 	std::shared_ptr<Actor> fence4 = CreateActor();
@@ -142,9 +142,9 @@ Scene::Scene(class Context* const context) : context(context)
 	auto fence4Texture = fence4->AddComponent<BackGroundComponent>();
 
 	fence4Texture->SetTexture("Assets/Texture/fence3.png");
-	fence4Texture->GetTexture()->FullSize(false, 10.0f, 159.0f);
+	fence4Texture->GetTexture()->FullSize(false, 14.0f, 159.0f);
 
-	fence4->GetComponent<TransformComponent>()->SetScale(D3DXVECTOR3(25.0f, 375.0f, 1.0f));
+	fence4->GetComponent<TransformComponent>()->SetScale(D3DXVECTOR3(35.0f, 375.0f, 1.0f));
 	fence4->GetComponent<TransformComponent>()->SetPosition(D3DXVECTOR3(488.0f, 375.0f, 0.0f));
 
 	// 1번째 울타리
@@ -155,7 +155,7 @@ Scene::Scene(class Context* const context) : context(context)
 	auto fence1Texture = fence1->AddComponent<BackGroundComponent>();
 
 	fence1Texture->SetTexture("Assets/Texture/fence.png");
-	fence1Texture->GetTexture()->FullSize(false, 362.0f, 32.0f);
+	fence1Texture->GetTexture()->FullSize(false, 362.0f, 31.0f);
 
 	fence1->GetComponent<TransformComponent>()->SetScale(D3DXVECTOR3(900.0f, 75.0f, 1.0f));
 	fence1->GetComponent<TransformComponent>()->SetPosition(D3DXVECTOR3(-600.0f, 150.0f, 0.0f));
@@ -168,9 +168,9 @@ Scene::Scene(class Context* const context) : context(context)
 	auto fence2Texture = fence2->AddComponent<BackGroundComponent>();
 
 	fence2Texture->SetTexture("Assets/Texture/fence2.png");
-	fence2Texture->GetTexture()->FullSize(false, 202.0f, 32.0f);
+	fence2Texture->GetTexture()->FullSize(false, 217.0f, 32.0f);
 
-	fence2->GetComponent<TransformComponent>()->SetScale(D3DXVECTOR3(500.0f, 75.0f, 1.0f));
+	fence2->GetComponent<TransformComponent>()->SetScale(D3DXVECTOR3(517.0f, 75.0f, 1.0f));
 	fence2->GetComponent<TransformComponent>()->SetPosition(D3DXVECTOR3(250.0f, 150.0f, 0.0f));
 
 	// ================================================================
@@ -301,9 +301,9 @@ Scene::Scene(class Context* const context) : context(context)
 	// 가로등
 	D3DXVECTOR2 streetLampPos[7] =
 	{
-		D3DXVECTOR2(832.0f, 192.0f), D3DXVECTOR2(739.0f, 273.0f), D3DXVECTOR2(579.0f, 273.0f),
-		D3DXVECTOR2(419.0f, 273.0f), D3DXVECTOR2(259.0f, 273.0f), D3DXVECTOR2(99.0f, 273.0f),
-		D3DXVECTOR2(835.0f, 49.0f)
+		D3DXVECTOR2(832.0f, 217.0f), D3DXVECTOR2(739.0f, 298.0f), D3DXVECTOR2(579.0f, 298.0f),
+		D3DXVECTOR2(419.0f, 298.0f), D3DXVECTOR2(259.0f, 298.0f), D3DXVECTOR2(99.0f, 298.0f),
+		D3DXVECTOR2(835.0f, 74.0f)
 	};
 
 	for (int i = 0; i < 7; i++)
@@ -315,13 +315,13 @@ Scene::Scene(class Context* const context) : context(context)
 
 		auto texture = object->AddComponent<AnimatorComponent>();
 		texture->SetAnimationFrameName(1, "StreetLamp");
-		texture->AddAnimation("Assets/Animation/SomeStatic.xml");
+		texture->AddAnimation("Assets/Animation/Map/StreetLamp.xml");
 		object->SetName("StreetLamp");
 
 		texture->SetCurrentAnimation("StreetLamp");
 		texture->SetAnimationMode(AnimationMode::Stop);
 
-		object->GetComponent<TransformComponent>()->SetScale(D3DXVECTOR3(80.0f, 250.0f, 1.0f));
+		object->GetComponent<TransformComponent>()->SetScale(D3DXVECTOR3(50.0f, 150.0f, 1.0f));
 		object->GetComponent<TransformComponent>()->SetPosition(D3DXVECTOR3(streetLampPos[i].x, streetLampPos[i].y, 1.0f));
 
 		// 플레이어와 충돌 처리 영역 설정
@@ -353,7 +353,7 @@ Scene::Scene(class Context* const context) : context(context)
 
 		auto texture = object->AddComponent<AnimatorComponent>();
 		texture->SetAnimationFrameName(1, "NormalTree");
-		texture->AddAnimation("Assets/Animation/SomeStatic.xml");
+		texture->AddAnimation("Assets/Animation/Map/Tree.xml");
 		object->SetName("Tree");
 
 		texture->SetCurrentAnimation("NormalTree");

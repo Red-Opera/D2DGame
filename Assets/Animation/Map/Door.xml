@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Animation>
+  <Door Name="WoodDoor" Type="1" TexturePath="Assets/Texture/Door.png" TextureSizeX="32" TextureSizeY="64">
+    <Keyframe OffsetX="0" OffsetY="0" SizeX="32" SizeY="64" Time="150"/>
+  </Door>
+</Animation>

@@ -47,6 +47,7 @@ void AnimatorComponent::Update()
 
 void AnimatorComponent::Destroy()
 {
+    
 }
 
 const std::shared_ptr<class Animation> AnimatorComponent::GetCurrentAnimation() const

@@ -30,6 +30,7 @@ Engine::Engine()
 	IMGUI_CHECKVERSION();
 	ImGui::CreateContext();
 	ImGuiIO& io = ImGui::GetIO(); (void)io;
+	sizeof(io);
 
 	// Setup Dear ImGui style
 	ImGui::StyleColorsDark();
