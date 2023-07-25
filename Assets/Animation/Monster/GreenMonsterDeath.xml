@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Animation>
-  <Move Name="GreenLeftDeath" Type="0" TexturePath="Assets/Texture/slime.png" TextureSizeX="640" TextureSizeY="640">
+  <Move Name="LeftDeath" Type="0" TexturePath="Assets/Texture/slime.png" TextureSizeX="640" TextureSizeY="640">
     <Keyframe OffsetX="8" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
     <Keyframe OffsetX="40" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
     <Keyframe OffsetX="72" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
@@ -13,16 +13,16 @@
     <Keyframe OffsetX="296" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
   </Move>
 
-  <Move Name="GreenRightDeath" Type="0" TexturePath="Assets/Texture/slime.png" TextureSizeX="640" TextureSizeY="640">
-    <Keyframe OffsetX="604" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
-    <Keyframe OffsetX="572" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
-    <Keyframe OffsetX="540" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
-    <Keyframe OffsetX="518" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
-    <Keyframe OffsetX="486" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
-    <Keyframe OffsetX="454" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
-    <Keyframe OffsetX="422" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
-    <Keyframe OffsetX="390" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
-    <Keyframe OffsetX="357" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
-    <Keyframe OffsetX="325" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
+  <Move Name="RightDeath" Type="0" TexturePath="Assets/Texture/slime.png" TextureSizeX="640" TextureSizeY="640">
+    <Keyframe OffsetX="616" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
+    <Keyframe OffsetX="584" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
+    <Keyframe OffsetX="552" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
+    <Keyframe OffsetX="520" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
+    <Keyframe OffsetX="488" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
+    <Keyframe OffsetX="456" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
+    <Keyframe OffsetX="424" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
+    <Keyframe OffsetX="392" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
+    <Keyframe OffsetX="360" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
+    <Keyframe OffsetX="328" OffsetY="144" SizeX="22" SizeY="16" Time="75"/>
   </Move>
 </Animation>

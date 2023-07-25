@@ -68,7 +68,11 @@ public:
 	float GetHpPersent() { return hp / maxHP; }
 	float GetManaPersent() { return mana / maxMana; }
 
+	bool GetIsDead() { return isDead; }
+
 private:
+	class Timer* timer = nullptr;	// 프레임 시간 측정을 위한 변수
+
 	// 상태 바 위치
 	BarTransform stateBarTransform;
 	GaugeScalePos gaugeScalePos;
@@ -83,5 +87,6 @@ private:
 	// 현재 상태
 	float hp = 0;
 	float mana = 0;
+	bool isDead = false;
 };
 

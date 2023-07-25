@@ -146,6 +146,7 @@
     <ClInclude Include="Core\SubSystem\ChangeAttackTypeManager.h" />
     <ClInclude Include="Core\SubSystem\GetCursorSystem.h" />
     <ClInclude Include="Core\SubSystem\PressUI.h" />
+    <ClInclude Include="Core\SubSystem\ScoreUI.h" />
     <ClInclude Include="Scene\Component\AttackComponent\PlayerSkillComponent.h" />
     <ClInclude Include="Scene\Component\AttackComponent\MultipleAttackTypesComponent.h" />
     <ClInclude Include="Scene\Component\AttackComponent\PlayerAttackComponent.h" />
@@ -217,6 +218,7 @@
     <ClCompile Include="Core\SubSystem\ChangeAttackTypeManager.cpp" />
     <ClCompile Include="Core\SubSystem\GetCursorSystem.cpp" />
     <ClCompile Include="Core\SubSystem\PressUI.cpp" />
+    <ClCompile Include="Core\SubSystem\ScoreUI.cpp" />
     <ClCompile Include="Scene\Component\AttackComponent\PlayerSkillComponent.cpp" />
     <ClCompile Include="Scene\Component\AttackComponent\MultipleAttackTypesComponent.cpp" />
     <ClCompile Include="Scene\Component\AttackComponent\PlayerAttackComponent.cpp" />
@@ -316,6 +318,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </Xml>
     <Xml Include="Assets\Animation\Map\Tree.xml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </Xml>
+    <Xml Include="Assets\Animation\Text.xml">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </Xml>
   </ItemGroup>

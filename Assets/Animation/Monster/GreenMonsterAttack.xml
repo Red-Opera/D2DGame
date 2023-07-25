@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Animation>
-  <Move Name="GreenLeftAttack" Type="1" TexturePath="Assets/Texture/slime.png" TextureSizeX="640" TextureSizeY="640">
+  <Move Name="LeftAttack" Type="1" TexturePath="Assets/Texture/slime.png" TextureSizeX="640" TextureSizeY="640">
     <Keyframe OffsetX="8" OffsetY="112" SizeX="16" SizeY="16" Time="75"/>
     <Keyframe OffsetX="40" OffsetY="112" SizeX="16" SizeY="16" Time="75"/>
     <Keyframe OffsetX="72" OffsetY="112" SizeX="16" SizeY="16" Time="75"/>
@@ -13,7 +13,7 @@
     <Keyframe OffsetX="296" OffsetY="112" SizeX="16" SizeY="16" Time="75"/>
   </Move>
 
-  <Move Name="GreenRightAttack" Type="1" TexturePath="Assets/Texture/slime.png" TextureSizeX="640" TextureSizeY="640">
+  <Move Name="RightAttack" Type="1" TexturePath="Assets/Texture/slime.png" TextureSizeX="640" TextureSizeY="640">
     <Keyframe OffsetX="616" OffsetY="112" SizeX="16" SizeY="16" Time="75"/>
     <Keyframe OffsetX="584" OffsetY="112" SizeX="16" SizeY="16" Time="75"/>
     <Keyframe OffsetX="552" OffsetY="112" SizeX="16" SizeY="16" Time="75"/>

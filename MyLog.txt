@@ -1,3 +1,3 @@
-CALLER	:Engine::Engine (C:\Users\hyuns\source\repos\2DGame(Direct X)\D2DGameProject\Core\Engine.cpp, 24)
+CALLER	:Engine::Engine (C:\Users\hyuns\source\repos\2DGame(Direct X)\D2DGameProject\Core\Engine.cpp, 25)
 ERROR	: 서브 시스템 초기화 실패
 

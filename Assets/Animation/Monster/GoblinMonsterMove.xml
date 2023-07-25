@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Animation>
-  <Move Name="GoblinRightMove" Type="1" TexturePath="Assets/Texture/Goblin.png" TextureSizeX="640" TextureSizeY="320">
+  <Move Name="RightMove" Type="1" TexturePath="Assets/Texture/Goblin.png" TextureSizeX="640" TextureSizeY="320">
     <Keyframe OffsetX="5" OffsetY="232" SizeX="22" SizeY="24" Time="75"/>
     <Keyframe OffsetX="37" OffsetY="232" SizeX="22" SizeY="24" Time="75"/>
     <Keyframe OffsetX="69" OffsetY="232" SizeX="22" SizeY="24" Time="75"/>
@@ -13,7 +13,7 @@
     <Keyframe OffsetX="293" OffsetY="232" SizeX="22" SizeY="24" Time="75"/>
   </Move>
 
-  <Move Name="GoblinLeftMove" Type="1" TexturePath="Assets/Texture/Goblin.png" TextureSizeX="640" TextureSizeY="320">
+  <Move Name="LeftMove" Type="1" TexturePath="Assets/Texture/Goblin.png" TextureSizeX="640" TextureSizeY="320">
     <Keyframe OffsetX="613" OffsetY="232" SizeX="22" SizeY="24" Time="75"/>
     <Keyframe OffsetX="581" OffsetY="232" SizeX="22" SizeY="24" Time="75"/>
     <Keyframe OffsetX="549" OffsetY="232" SizeX="22" SizeY="24" Time="75"/>

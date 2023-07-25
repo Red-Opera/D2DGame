@@ -93,8 +93,6 @@ bool Animation::LoadFromFile(const std::string& path)
         // 텍스쳐 디렉토리 위치 (TexturePath)
         texturePath.push_back(root->ToElement()->Attribute("TexturePath"));                         // Animation 루트에 저장된 TexturePath를 가져옴
         SetSpriteTexture(animationName.back(), texturePath.back());
-
-
      
         // Animation 루트에 저장된 덱스쳐 좌표을 가져옴, 문자열 -> float로 변환
         textureSize.push_back(D3DXVECTOR2(atof(root->ToElement()->Attribute("TextureSizeX")), atof(root->ToElement()->Attribute("TextureSizeY"))));

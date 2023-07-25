@@ -71,6 +71,7 @@
     <ClInclude Include="Scene\Component\AttackComponent\PlayerSkillComponent.h" />
     <ClInclude Include="Core\SubSystem\ChangeAttackTypeManager.h" />
     <ClInclude Include="Core\SubSystem\PressUI.h" />
+    <ClInclude Include="Core\SubSystem\ScoreUI.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -138,9 +139,11 @@
     <ClCompile Include="Scene\Component\AttackComponent\PlayerSkillComponent.cpp" />
     <ClCompile Include="Core\SubSystem\ChangeAttackTypeManager.cpp" />
     <ClCompile Include="Core\SubSystem\PressUI.cpp" />
+    <ClCompile Include="Core\SubSystem\ScoreUI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Assets\Animation\Map\Tree.xml" />
     <Xml Include="Assets\Animation\Map\StreetLamp.xml" />
+    <Xml Include="Assets\Animation\Text.xml" />
   </ItemGroup>
 </Project>

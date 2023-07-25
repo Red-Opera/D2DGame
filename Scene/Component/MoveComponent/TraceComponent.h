@@ -27,10 +27,6 @@ public:
 	virtual void Update() override;
 	virtual void Destroy() override;
 
-public:
-	static bool FindRightMoveSprite(std::string& spriteName) { return (spriteName.substr(spriteName.size() - 9, 9) == "RightMove"); }
-	static bool FindLeftMoveSprite(std::string& spriteName) { return (spriteName.substr(spriteName.size() - 8, 8) == "LeftMove"); }
-
 private:
 	std::weak_ptr<class Actor> target;		// Å¸°Ù °´Ã¼ º¯¼ö
 

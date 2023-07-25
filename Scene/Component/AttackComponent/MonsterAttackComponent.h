@@ -35,10 +35,6 @@ public:
 	void SetSizeChange(float mul, ResizeTo axis) { this->multipleSpriteSize *= mul; this->axis = axis; this->isMulSize; }
 
 private:
-	static bool FindRightAttackSprite(std::string& spriteName) { return (spriteName.substr(spriteName.size() - 11, 11) == "RightAttack"); }
-	static bool FindLeftAttackSprite(std::string& spriteName) { return (spriteName.substr(spriteName.size() - 10, 10) == "LeftAttack"); }
-
-private:
 	float delay;					// 사격 딜레이 (단위 : 초)
 	float attackRange;				// 객체의 사거리
 	float damage;					// 객체의 공격력

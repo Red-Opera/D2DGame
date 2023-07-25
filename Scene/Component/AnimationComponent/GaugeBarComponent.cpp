@@ -47,26 +47,55 @@ void GaugeBarComponent::Initialize()
 
 void GaugeBarComponent::Update()
 {
+	// 현재 퍼센트를 구함
+	float hpPersent = GetHp() / GetMaxHp();
+	float manaPersent = GetMana() / GetMaxMana();
+
 	if (hp <= 0)
 	{
 		const auto& parent = actor->GetComponent<TransformComponent>()->GetParent().lock()->GetActor();
+		bool animatorExist = parent->HasCompoent<AnimatorComponent>();
 
+		// 죽은 객체가 플레이어인 경우
 		if (parent->GetName() == "Player")
 		{
 			assert(false && "Game Over");
 			exit(0);
 		}
 
-		Destroy();
-		return;
+		// 죽은 객체가 몬스터인 경우
+		else if (!isDead && animatorExist)
+		{
+			context->GetSubSystem<ScoreUI>()->AddScore(1);
+
+			std::shared_ptr animator = parent->GetComponent<AnimatorComponent>();
+
+			if (parent->GetName().substr(1) == "GreenSlimeMonster")
+				parent->GetComponent<TransformComponent>()->SetScale(D3DXVECTOR3(65.0f, 50.0f, 1.0f));
+
+			else
+				parent->GetComponent<TransformComponent>()->SetScale(D3DXVECTOR3(70.0f, 100.0f, 1.0f));
+			
+			// 죽은 애니메이션 실행
+			if (animator->GetNowKeyFrameName() == "LeftAttack" || animator->GetNowKeyFrameName() == "LeftMove")
+				parent->GetComponent<AnimatorComponent>()->SetCurrentAnimation("LeftDeath");
+
+			else
+				parent->GetComponent<AnimatorComponent>()->SetCurrentAnimation("RightDeath");
+
+			isDead = true;
+		}
+
+		// 죽는 애니메이션이 없거나 애니메이션이 끝난 경우 사망 처리
+		if (!animatorExist || parent->GetComponent<AnimatorComponent>()->GetAnimationMode() == AnimationMode::Pause)
+		{
+			Destroy();
+			return;
+		}
+
+		hpPersent = 0.0f;
+		manaPersent = 0.0f;
 	}
-
-	//hp -= 0.1f;
-	//mana -= 0.05f;
-
-	// 현재 퍼센트를 구함
-	float hpPersent = GetHp() / GetMaxHp();
-	float manaPersent = GetMana() / GetMaxMana();
 
 	// 게이지의 크기 설정
 	children.at("HpGauge")->GetComponent<TransformComponent>()->SetLocalScale(D3DXVECTOR3(gaugeScalePos.hpBarGaugeSize.x * hpPersent, gaugeScalePos.hpBarGaugeSize.y, 1.0f));
@@ -101,6 +130,7 @@ void GaugeBarComponent::Destroy()
 	}
 
 	// 게이지 바 제거
+	parent->Destroy();
 	parent->~Actor();
 	actor->SetName("");
 }

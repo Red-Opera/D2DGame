@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Animation>
+  <ScoreLabel Name="label" Type="0" TexturePath="Assets/Texture/KILLS.png" TextureSizeX="72" TextureSizeY="15">
+    <Keyframe OffsetX="0" OffsetY="0" SizeX="72" SizeY="15" Time="10000"/>
+  </ScoreLabel>
+</Animation>

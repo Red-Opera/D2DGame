@@ -201,7 +201,7 @@ Scene::Scene(class Context* const context) : context(context)
 	// 슬라임
 	std::list<std::shared_ptr<Actor>> monster;
 
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 10; i++)
 	{
 		monster.emplace_back(CreateActor());
 		monster.back()->AddComponent<MeshRendererComponent>();
@@ -212,14 +212,14 @@ Scene::Scene(class Context* const context) : context(context)
 		monster.back()->AddComponent<BulletComponent>();
 
 		auto monsterAnimator = monster.back()->AddComponent<AnimatorComponent>();
-		monsterAnimator->SetAnimationFrameName(2, "GreenLeftMove", "GreenRightMove");
+		monsterAnimator->SetAnimationFrameName(2, "LeftMove", "RightMove");
 		monsterAnimator->AddAnimation("Assets/Animation/Monster/GreenMonsterMove.xml");
-		monsterAnimator->SetAnimationFrameName(2, "GreenLeftAttack", "GreenRightAttack");
+		monsterAnimator->SetAnimationFrameName(2, "LeftAttack", "RightAttack");
 		monsterAnimator->AddAnimation("Assets/Animation/Monster/GreenMonsterAttack.xml");
-		monsterAnimator->SetAnimationFrameName(2, "GreenLeftDeath", "GreenRightDeath");
+		monsterAnimator->SetAnimationFrameName(2, "LeftDeath", "RightDeath");
 		monsterAnimator->AddAnimation("Assets/Animation/Monster/GreenMonsterDeath.xml");
 
-		monsterAnimator->SetCurrentAnimation("GreenRightMove");
+		monsterAnimator->SetCurrentAnimation("RightMove");
 		monsterAnimator->SetAnimationMode(AnimationMode::Play);
 
 		monster.back()->GetComponent<TransformComponent>()->SetScale(D3DXVECTOR3(50.0f, 50.0f, 1.0f));
@@ -242,7 +242,7 @@ Scene::Scene(class Context* const context) : context(context)
 	// Goblin
 	std::list<std::shared_ptr<Actor>> monster2;
 
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 10; i++)
 	{
 		monster2.emplace_back(CreateActor());
 
@@ -253,14 +253,14 @@ Scene::Scene(class Context* const context) : context(context)
 		monster2.back()->AddComponent<BulletComponent>();
 
 		auto monster2Animator = monster2.back()->AddComponent<AnimatorComponent>();
-		monster2Animator->SetAnimationFrameName(2, "GoblinLeftMove", "GoblinRightMove");
+		monster2Animator->SetAnimationFrameName(2, "LeftMove", "RightMove");
 		monster2Animator->AddAnimation("Assets/Animation/Monster/GoblinMonsterMove.xml");
-		monster2Animator->SetAnimationFrameName(2, "GoblinLeftAttack", "GoblinRightAttack");
+		monster2Animator->SetAnimationFrameName(2, "LeftAttack", "RightAttack");
 		monster2Animator->AddAnimation("Assets/Animation/Monster/GoblinMonsterAttack.xml");
-		monster2Animator->SetAnimationFrameName(2, "GoblinLeftDeath", "GoblinRightMove");
+		monster2Animator->SetAnimationFrameName(2, "LeftDeath", "RightDeath");
 		monster2Animator->AddAnimation("Assets/Animation/Monster/GoblinMonsterDeath.xml");
 
-		monster2Animator->SetCurrentAnimation("GoblinRightMove");
+		monster2Animator->SetCurrentAnimation("RightMove");
 		monster2Animator->SetAnimationMode(AnimationMode::Play);
 
 		monster2.back()->GetComponent<TransformComponent>()->SetScale(D3DXVECTOR3(120.0f, 100.0f, 1.0f));
@@ -383,7 +383,7 @@ Scene::Scene(class Context* const context) : context(context)
 	player->AddComponent<PlayerAttackComponent>();
 	player->GetComponent<PlayerAttackComponent>()->SetAttackDelay(0.35f);
 	player->GetComponent<PlayerAttackComponent>()->SetAttackRange(50.0f);
-	player->GetComponent<PlayerAttackComponent>()->SetDamage(20.0f);
+	player->GetComponent<PlayerAttackComponent>()->SetDamage(2000.0f);
 	player->GetComponent<PlayerAttackComponent>()->SetStyleSpeed(PlayerBulletStyle::Short);
 
 	player->AddComponent<PlayerSkillComponent>();
@@ -458,7 +458,7 @@ Scene::~Scene()
 void Scene::Update()
 {
 	// 몬스터 1개씩 활성화
-	if ((onMonster < 5) && (nowDelay < 0))
+	if ((onMonster < 10) && (nowDelay < 0))
 	{
 		BarTransform barTransform = { D3DXVECTOR2(0.0f, 100.0f), D3DXVECTOR2(0.0f, 75.0f), D3DXVECTOR2(125.0f, 13.0f), D3DXVECTOR2(125.0f, 13.0f) };
 		static int count = 1;
@@ -520,7 +520,7 @@ void Scene::Update()
 		}
 
 		onMonster++;
-		nowDelay = 2.0f;
+		nowDelay = 0.25f;
 	}
 	else nowDelay -= timer->GetDeltaTimeSEC();
 
@@ -575,4 +575,5 @@ void Scene::EreaseActor(const std::shared_ptr<class Actor>& actor)
 	}
 	
 	actors.erase(std::find(actors.begin(), actors.end(), actor));
+	actor->~Actor();
 }

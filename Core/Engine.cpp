@@ -17,6 +17,7 @@ Engine::Engine()
 	context->RegisterSubSystem<GetCursorSystem>();			// 커서관련 서브 시스템
 	context->RegisterSubSystem<ChangeAttackTypeManager>();	// 공격변화 관련 서브시스템
 	context->RegisterSubSystem<PressUI>();					// UI관련 서브시스템
+	context->RegisterSubSystem<ScoreUI>();
 
 	bool hr = context->InitializeSubSystems();
 

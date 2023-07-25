@@ -14,8 +14,11 @@
 2023-02-23 (16일차) : 메인 카메라 및 플레이어 위치 맵 위치까지만 이동하도록 설정, 몬스터 단거리 공격 처리
 2023-02-24 (17일차) : 플레이어 단거리 공격 스프라이트 완성
 2023-02-25 (18일차) : 플레이어 단거리 공격 모션 완성
+2023-07-24 (19일차) : 몬스터 사망 애니메이션 제작
+2023-07-25 (20일차) : 몬스터 사망 애니메이션 구현
+2023-07-26 (21일차) : 플레이어 킬 수 UI 제작
 
-// 미구현 : 적 캐릭터 생성, 적 캐릭터 이동 구현, 캐릭터 및 적 공격 처리, 사운드 처리, Scene이동 처리, 탈 것 처리
+// 미구현 :  사운드 처리, Scene이동 처리, 탈 것 처리
 
 마우스 클릭 이미지 : https://creazilla.com/ko/nodes/1579-vector
 하트 이미지 : https://pixabay.com/sv/illustrations/pixel-hj%C3%A4rta-hj%C3%A4rta-pixel-symbol-2779422/
@@ -37,3 +40,4 @@
 흙길, 배경 이미지 : https://opengameart.org/content/outdoors-tileset
 꽃 이미지 : https://opengameart.org/content/pixel-land-15
 슬라임 총알 이미지 : https://www.doomworld.com/forum/topic/73426-share-your-sprites/?page=27
+텍스트 이미지 : https://opengameart.org/content/font-kenvector-future-2-modified

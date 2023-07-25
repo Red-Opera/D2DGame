@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Animation>
+  <Text Name="None" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="235" OffsetY="0" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+  
+  <Text Name="A" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="0" OffsetY="0" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="B" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="15" OffsetY="0" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="C" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="30" OffsetY="0" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="D" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="45" OffsetY="0" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="E" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="60" OffsetY="0" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="F" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="75" OffsetY="0" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="G" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="90" OffsetY="0" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="H" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="105" OffsetY="0" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="I" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="120" OffsetY="0" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="J" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="135" OffsetY="0" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="K" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="150" OffsetY="0" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="L" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="0" OffsetY="15" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="M" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="15" OffsetY="15" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="N" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="30" OffsetY="15" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="O" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="45" OffsetY="15" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="P" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="60" OffsetY="15" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="Q" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="75" OffsetY="15" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="R" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="90" OffsetY="15" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="S" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="105" OffsetY="15" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="T" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="120" OffsetY="15" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="U" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="135" OffsetY="15" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="V" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="150" OffsetY="15" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="W" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="0" OffsetY="30" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="X" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="15" OffsetY="30" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="Y" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="30" OffsetY="30" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="Z" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="45" OffsetY="30" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="1" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="60" OffsetY="30" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="2" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="75" OffsetY="30" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="3" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="90" OffsetY="30" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="4" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="105" OffsetY="30" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="5" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="120" OffsetY="30" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="6" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="135" OffsetY="30" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="7" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="150" OffsetY="30" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="8" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="0" OffsetY="45" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="9" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="15" OffsetY="45" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+
+  <Text Name="0" Type="0" TexturePath="Assets/Texture/Text.png" TextureSizeX="250" TextureSizeY="125">
+    <Keyframe OffsetX="30" OffsetY="45" SizeX="15" SizeY="15" Time="10000"/>
+  </Text>
+  
+</Animation>

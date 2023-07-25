@@ -111,7 +111,7 @@ void AnimatorComponent::SetAnimationFrameName(const int count, char const * cons
 {
     va_list list;
 
-    va_start(list, 4);
+    va_start(list, 20);
     for (int i = 0; i < count; i++)
     {
         char* data = va_arg(list, char*);

@@ -28,6 +28,7 @@
 #include <mutex>
 #include <fstream>
 #include <queue>
+#include <string>
 
 // DX
 #include <d3dcompiler.h>
@@ -90,6 +91,7 @@ using uint = unsigned int;
 #include "Core/SubSystem/GetCursorSystem.h"
 #include "Core/SubSystem/ChangeAttackTypeManager.h"
 #include "Core/SubSystem/PressUI.h"
+#include "Core/SubSystem/ScoreUI.h"
 
 // D3D11
 #include "Core/D3D11/Vertex/D3D11_Vertex.h"

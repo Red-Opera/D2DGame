@@ -7,6 +7,7 @@
 #include "../MoveComponent/TransformComponent.h"
 
 #include "../AnimationComponent/AnimatorComponent.h"
+#include "../AnimationComponent/GaugeBarComponent.h"
 
 void MonsterAttackComponent::Initialize()
 {
@@ -39,6 +40,11 @@ void MonsterAttackComponent::Update()
 		return;
 	}
 
+	// 만약 몬스터가 죽었을 경우 아래는 처리하지 않음
+	if (actor->GetComponent<TransformComponent>()->GetChildFromIndex(0).lock()->GetActor()->HasCompoent<GaugeBarComponent>() 
+	 && actor->GetComponent<TransformComponent>()->GetChildFromIndex(0).lock()->GetActor()->GetComponent<GaugeBarComponent>()->GetIsDead())
+		return;
+
 	// TransformComponent에서 설정한 타겟을 가져옴
 	auto target = actor->GetComponent<TraceComponent>()->GetTarget().lock();
 
@@ -56,10 +62,10 @@ void MonsterAttackComponent::Update()
 	// 사격 거리 안에 들어온 경우
 	if (distance <= attackRange)
 	{
-		if (frameName.size() >= 9 && frameName.substr(frameName.size() - 9, 9) == "RightMove")
+		if (!frameName.compare("RightMove"))
 		{	
 			// 오른쪽을 보고 있는 상태에서 공격하는 스프라이트를 가져옴
-			iter = std::find_if(allFrameName.begin(), allFrameName.end(), FindRightAttackSprite);
+			iter = std::find(allFrameName.begin(), allFrameName.end(), "RightAttack");
 
 			if (iter == allFrameName.end())
 			{
@@ -68,10 +74,10 @@ void MonsterAttackComponent::Update()
 			}
 		}
 
-		else if (frameName.size() >= 8 && frameName.substr(frameName.size() - 8, 8) == "LeftMove")
+		else if (!frameName.compare("LeftMove"))
 		{
 			// 왼쪽을 보고 있는 상태에서 공격하는 스프라이트를 가져옴
-			iter = std::find_if(allFrameName.begin(), allFrameName.end(), FindLeftAttackSprite);
+			iter = std::find(allFrameName.begin(), allFrameName.end(), "LeftAttack");
 
 			if (iter == allFrameName.end())
 			{

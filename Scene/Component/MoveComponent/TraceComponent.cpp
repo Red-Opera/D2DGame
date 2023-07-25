@@ -4,6 +4,7 @@
 #include "CollisionComponent.h"
 
 #include "../AnimationComponent/AnimatorComponent.h"
+#include "../AnimationComponent/GaugeBarComponent.h"
 #include "../AttackComponent/MonsterAttackComponent.h"
 
 #include "Intersect/Intersect.h"
@@ -62,13 +63,23 @@ void TraceComponent::Update()
 			return;
 		}
 
+		// 만약 몬스터가 죽었을 경우 아래는 처리하지 않음
+		if (actor->HasCompoent<GaugeBarComponent>() && actor->GetComponent<GaugeBarComponent>()->GetHp() <= 0)
+			return;
+
 
 		// 이동방향이 바뀌는 순간 공격하는 방향을 바꾸기 위해 잠시 공격을 풀음
 		if (diffPos.x > 0 && direction == Direction::Left) actor->GetComponent<MonsterAttackComponent>()->SetIsAttack(false);
 		if (diffPos.x < 0 && direction == Direction::Right) actor->GetComponent<MonsterAttackComponent>()->SetIsAttack(false);
 
 		// 해당 객체가 공격 중이면 중지
-		if (actor->GetComponent<MonsterAttackComponent>()->GetIsAttack()) return;
+		if (actor->GetComponent<MonsterAttackComponent>()->GetIsAttack()) 
+			return;
+
+		// 만약 몬스터가 죽었을 경우 아래는 처리하지 않음
+		if (actor->GetComponent<TransformComponent>()->GetChildFromIndex(0).lock()->GetActor()->HasCompoent<GaugeBarComponent>()
+			&& actor->GetComponent<TransformComponent>()->GetChildFromIndex(0).lock()->GetActor()->GetComponent<GaugeBarComponent>()->GetIsDead())
+			return;
 
 		// 이동 방향 및 이동 속도를 구함
 		diffPos.y -= (targetSize.y / 2 - actor->GetComponent<TransformComponent>()->GetScale().y / 2);	// 추적 객체의 아래로 이동하게 만듬 (적용하지 않았을 경우 몬스터가 공중에 뜨는 현상이 생김)
@@ -83,12 +94,13 @@ void TraceComponent::Update()
 		toPos = D3DXVECTOR2(speedX, speedY);							
 
 		// 스프라이트 
+		auto frameName = actor->GetComponent<AnimatorComponent>()->GetNowKeyFrameName();		// 현재의 frameName을 가져옴
 		std::vector<std::string> spriteName = actor->GetComponent<AnimatorComponent>()->GetAnimationFrameNames(); // 모든 애니메이션의 프레임 이름을 가져옴
 
-		if (diffPos.x > 0)
+		if (diffPos.x > 0 && frameName.compare("RightMove"))
 		{
 			// 오른쪽으로 이동하는 스프라이트를 찾음
-			auto iter = std::find_if(spriteName.begin(), spriteName.end(), FindRightMoveSprite);
+			auto iter = std::find(spriteName.begin(), spriteName.end(), "RightMove");
 
 			if (iter == spriteName.end())
 			{
@@ -103,10 +115,10 @@ void TraceComponent::Update()
 			direction = Direction::Right;
 		}
 
-		else if (diffPos.x < 0)
+		else if (diffPos.x < 0 && frameName.compare("LeftMove"))
 		{
 			// 왼쪽으로 이동하는 스프라이트를 찾음
-			std::vector<std::string>::iterator iter = std::find_if(spriteName.begin(), spriteName.end(), FindLeftMoveSprite);
+			std::vector<std::string>::iterator iter = std::find(spriteName.begin(), spriteName.end(), "LeftMove");
 
 			if (iter == spriteName.end())
 			{
