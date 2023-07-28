@@ -18,6 +18,7 @@ void TransformComponent::Initialize()
 
 void TransformComponent::Update()
 {
+	UpdateTransform();
 }
 
 void TransformComponent::Destroy()

@@ -1,11 +1,14 @@
 #include "stdafx.h"
 #include "SceneManager.h"
 #include "Scene/Scene.h"
+#include "Scene/MainScene.h"
+#include "Scene/WidePlainScene.h"
 
 bool SceneManager::Initialize()
 {
-    RegisterScene("First");
-    SetCurrentScene("First");
+    RegisterScene("WidePlainScene");
+
+    SetCurrentScene("WidePlainScene");
 
     return true;
 }
@@ -13,7 +16,13 @@ bool SceneManager::Initialize()
 void SceneManager::Update()
 {
     if (current_scene.expired() != true)
-        current_scene.lock()->Update();
+    {
+        if (!nowSceneName.compare("WidePlainScene"))
+            std::static_pointer_cast<WidePlainScene>(current_scene.lock())->Update();
+
+        else if (!nowSceneName.compare("MainScene"))
+            std::static_pointer_cast<MainScene>(current_scene.lock())->Update();
+    }
 }
 
 Scene* const SceneManager::GetCurrentScene()
@@ -31,6 +40,7 @@ void SceneManager::SetCurrentScene(const std::string& scene_name)
     }
 
     current_scene = scenes[scene_name];
+    nowSceneName = scene_name;
 }
 
 Scene* const SceneManager::RegisterScene(const std::string& scene_name)
@@ -42,7 +52,12 @@ Scene* const SceneManager::RegisterScene(const std::string& scene_name)
         return nullptr;
     }
 
-    std::shared_ptr<Scene> new_scene = std::make_shared<Scene>(context);
+    std::shared_ptr<Scene> new_scene;
+    if (scene_name == "WidePlainScene")
+        new_scene = std::make_shared<WidePlainScene>(context);
+
+    else if (scene_name == "MainScene")
+        new_scene = std::make_shared<MainScene>(context);
 
     scenes[scene_name] = new_scene;
 

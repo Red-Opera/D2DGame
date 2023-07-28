@@ -8,6 +8,7 @@
 #include "MoveComponent/AIScriptComponent.h"
 #include "MoveComponent/TraceComponent.h"
 #include "MoveComponent/CollisionComponent.h"
+#include "MoveComponent/TeleportComponent.h"
 
 #include "AnimationComponent/AnimatorComponent.h"
 #include "AnimationComponent/BackGroundManager.h"
@@ -47,3 +48,4 @@ REGISTER_COMPONENT_TYPE(BulletComponent, ComponentType::Bullet);							// 총알관
 REGISTER_COMPONENT_TYPE(PlayerAttackComponent, ComponentType::PlayerAttack);				// 플레이어공격관련 Component 등록
 REGISTER_COMPONENT_TYPE(MultipleAttackTypesComponent, ComponentType::MultipleAttackTypes);	// 다양한공격관련 Component 등록
 REGISTER_COMPONENT_TYPE(PlayerSkillComponent, ComponentType::PlayerSkill);					// 플레이어스킬관련 Component 등록
+REGISTER_COMPONENT_TYPE(TeleportComponent, ComponentType::Teleport);						// 텔레포트관련 Component 등록

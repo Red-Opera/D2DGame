@@ -101,6 +101,28 @@ void PressUI::Update()
         firstRun = true;
     }
 
+    if (changeScene)
+    {
+        const auto& scene = context->GetSubSystem<SceneManager>()->GetCurrentScene();
+        const auto& actors = context->GetSubSystem<SceneManager>()->GetCurrentScene()->GetActors();
+
+        // 모든 객체를 MainCamera의 부모로 설정함
+        for (const auto& actor : actors)
+        {
+            if (actor->GetName() == "MainCamera")
+            {
+                for (const auto& key : UIActor)
+                {
+                    scene->AddActor(key.second);
+                    actor->GetComponent<TransformComponent>()->AddChild(key.second->GetComponent<TransformComponent>());
+                    key.second->GetComponent<TransformComponent>()->SetParent(actor->GetComponent<TransformComponent>());
+                }
+            }
+        }
+
+        changeScene = false;
+    }
+
     if (HOLDPRESSKEYBOARD(input, DIK_W))
         UIActor.at("W")->GetComponent<AnimatorComponent>()->SetCurrentAnimation("YW");
 

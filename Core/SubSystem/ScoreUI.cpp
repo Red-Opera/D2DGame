@@ -113,6 +113,28 @@ void ScoreUI::Update()
         firstRun = true;
     }
 
+    if (changeScene)
+    {
+        const auto& scene = context->GetSubSystem<SceneManager>()->GetCurrentScene();
+        const auto& actors = context->GetSubSystem<SceneManager>()->GetCurrentScene()->GetActors();
+
+        // 모든 객체를 MainCamera의 부모로 설정함
+        for (const auto& actor : actors)
+        {
+            if (actor->GetName() == "MainCamera")
+            {
+                for (const auto& key : UIActor)
+                {
+                    scene->AddActor(key.second);
+                    actor->GetComponent<TransformComponent>()->AddChild(key.second->GetComponent<TransformComponent>());
+                    key.second->GetComponent<TransformComponent>()->SetParent(actor->GetComponent<TransformComponent>());
+                }
+            }
+        }
+
+        changeScene = false;
+    }
+
     unsigned long long temp = score;    // 현재 점수를 가져옴
     int decimal = CountDecimal(temp);   // 점수가 몇자리인지 가져옴
 

@@ -17,8 +17,10 @@
 2023-07-24 (19일차) : 몬스터 사망 애니메이션 제작
 2023-07-25 (20일차) : 몬스터 사망 애니메이션 구현
 2023-07-26 (21일차) : 플레이어 킬 수 UI 제작
+2023-07-27 (22일차) : 텔레포트 제작 및 맵 이동 구현 및 새로운 맵 제작
+2023-07-28 (23일차) : 메인 맵 객체 위치 조정, 메모리 및 속도 최적화
 
-// 미구현 :  사운드 처리, Scene이동 처리, 탈 것 처리
+// 미구현 : 사운드 처리, 탈 것 처리
 
 마우스 클릭 이미지 : https://creazilla.com/ko/nodes/1579-vector
 하트 이미지 : https://pixabay.com/sv/illustrations/pixel-hj%C3%A4rta-hj%C3%A4rta-pixel-symbol-2779422/
@@ -41,3 +43,4 @@
 꽃 이미지 : https://opengameart.org/content/pixel-land-15
 슬라임 총알 이미지 : https://www.doomworld.com/forum/topic/73426-share-your-sprites/?page=27
 텍스트 이미지 : https://opengameart.org/content/font-kenvector-future-2-modified
+아이콘 이미지 : https://opengameart.org/content/32x-sword-icon

@@ -17,6 +17,7 @@ public:
 	virtual void Update() override;
 
 	void UpdateRenderables(class Scene* const scene);	// renderables의 모든 객체를 업데이트 해주는 함수
+	void SetCameraTarget(class CameraComponent* camera) { this->camera = camera; }
 
 private:
 	void PassMain();	// 해당 파일아래에 함수를 정의하고 구현을 누르면 Rederer_Passes로 이동함

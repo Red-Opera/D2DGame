@@ -63,6 +63,7 @@ void D3D11_Shader::Create(const ShaderScope& scope, const std::string& shader)
     compilation_state = HasResource() ? CompilationState::Succeeded : CompilationState::Failed;
 }
 
+
 void D3D11_Shader::Clear()
 {
     switch (shader_scope)

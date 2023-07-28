@@ -5,7 +5,7 @@
     <ClInclude Include="Core\Window.h" />
     <ClInclude Include="Core\SubSystem\Graphics.h" />
     <ClInclude Include="Core\Settings.h" />
-    <ClInclude Include="Scene\Scene.h" />
+    <ClInclude Include="Scene\MainScene.h" />
     <ClInclude Include="Core\D3D11\Vertex\D3D11_Vertex.h" />
     <ClInclude Include="Core\D3D11\Vertex\D3D11_Geometry.h" />
     <ClInclude Include="Core\D3D11\Vertex\D3D11_Geometry.inl" />
@@ -72,12 +72,18 @@
     <ClInclude Include="Core\SubSystem\ChangeAttackTypeManager.h" />
     <ClInclude Include="Core\SubSystem\PressUI.h" />
     <ClInclude Include="Core\SubSystem\ScoreUI.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Scene\WidePlainScene.h" />
+    <ClInclude Include="Scene\Scene.h" />
+    <ClInclude Include="Scene\Component\MoveComponent\TeleportComponent.h" />
+    <ClInclude Include="Core\D3D11\Shader\TempTexture.h" />
+    <ClInclude Include="TempShader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="Core\SubSystem\Graphics.cpp" />
-    <ClCompile Include="Scene\Scene.cpp" />
+    <ClCompile Include="Scene\MainScene.cpp" />
     <ClCompile Include="Core\D3D11\Vertex\D3D11_Vertex.cpp" />
     <ClCompile Include="Core\D3D11\InputAssembler\D3D11_VertexBuffer.cpp" />
     <ClCompile Include="Core\D3D11\InputAssembler\D3D11_IndexBuffer.cpp" />
@@ -140,10 +146,21 @@
     <ClCompile Include="Core\SubSystem\ChangeAttackTypeManager.cpp" />
     <ClCompile Include="Core\SubSystem\PressUI.cpp" />
     <ClCompile Include="Core\SubSystem\ScoreUI.cpp" />
+    <ClCompile Include="Scene\WidePlainScene.cpp" />
+    <ClCompile Include="Scene\Scene.cpp" />
+    <ClCompile Include="Scene\Component\MoveComponent\TeleportComponent.cpp" />
+    <ClCompile Include="Core\D3D11\Shader\TempTexture.cpp" />
+    <ClCompile Include="TempShader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Assets\Animation\Map\Tree.xml" />
     <Xml Include="Assets\Animation\Map\StreetLamp.xml" />
     <Xml Include="Assets\Animation\Text.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="GameIco.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
   </ItemGroup>
 </Project>

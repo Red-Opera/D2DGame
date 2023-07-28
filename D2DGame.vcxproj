@@ -143,10 +143,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Core\D3D11\Shader\TempTexture.h" />
     <ClInclude Include="Core\SubSystem\ChangeAttackTypeManager.h" />
     <ClInclude Include="Core\SubSystem\GetCursorSystem.h" />
     <ClInclude Include="Core\SubSystem\PressUI.h" />
     <ClInclude Include="Core\SubSystem\ScoreUI.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Scene\Scene.h" />
     <ClInclude Include="Scene\Component\AttackComponent\PlayerSkillComponent.h" />
     <ClInclude Include="Scene\Component\AttackComponent\MultipleAttackTypesComponent.h" />
     <ClInclude Include="Scene\Component\AttackComponent\PlayerAttackComponent.h" />
@@ -177,6 +180,9 @@
     <ClInclude Include="Core\D3D11\D3D11_Pipeline.h" />
     <ClInclude Include="Core\Object.h" />
     <ClInclude Include="Resource\StaticTexture.h" />
+    <ClInclude Include="Scene\WidePlainScene.h" />
+    <ClInclude Include="Scene\Component\MoveComponent\TeleportComponent.h" />
+    <ClInclude Include="TempShader.h" />
     <ClInclude Include="Utility\Math\Math.h" />
     <ClInclude Include="Core\SubSystem\Timer.h" />
     <ClInclude Include="Scene\Component\MoveComponent\TransformComponent.h" />
@@ -194,7 +200,7 @@
     <ClInclude Include="Core\D3D11\InputAssembler\D3D11_InputLayout.h" />
     <ClInclude Include="Core\D3D11\InputAssembler\D3D11_IndexBuffer.h" />
     <ClInclude Include="Core\D3D11\InputAssembler\D3D11_VertexBuffer.h" />
-    <ClInclude Include="Scene\Scene.h" />
+    <ClInclude Include="Scene\MainScene.h" />
     <ClInclude Include="Core\SubSystem\Graphics.h" />
     <ClInclude Include="Core\Settings.h" />
     <ClInclude Include="stdafx.h" />
@@ -215,10 +221,12 @@
     <ClInclude Include="Utility\Xml.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Core\D3D11\Shader\TempTexture.cpp" />
     <ClCompile Include="Core\SubSystem\ChangeAttackTypeManager.cpp" />
     <ClCompile Include="Core\SubSystem\GetCursorSystem.cpp" />
     <ClCompile Include="Core\SubSystem\PressUI.cpp" />
     <ClCompile Include="Core\SubSystem\ScoreUI.cpp" />
+    <ClCompile Include="Scene\Scene.cpp" />
     <ClCompile Include="Scene\Component\AttackComponent\PlayerSkillComponent.cpp" />
     <ClCompile Include="Scene\Component\AttackComponent\MultipleAttackTypesComponent.cpp" />
     <ClCompile Include="Scene\Component\AttackComponent\PlayerAttackComponent.cpp" />
@@ -246,6 +254,9 @@
     <ClCompile Include="Scene\Actor.cpp" />
     <ClCompile Include="Core\D3D11\D3D11_Pipeline.cpp" />
     <ClCompile Include="Resource\StaticTexture.cpp" />
+    <ClCompile Include="Scene\WidePlainScene.cpp" />
+    <ClCompile Include="Scene\Component\MoveComponent\TeleportComponent.cpp" />
+    <ClCompile Include="TempShader.cpp" />
     <ClCompile Include="Utility\Math\Math.cpp" />
     <ClCompile Include="Core\SubSystem\Timer.cpp" />
     <ClCompile Include="Scene\Component\MoveComponent\TransformComponent.cpp" />
@@ -263,7 +274,7 @@
     <ClCompile Include="Core\D3D11\InputAssembler\D3D11_InputLayout.cpp" />
     <ClCompile Include="Core\D3D11\InputAssembler\D3D11_IndexBuffer.cpp" />
     <ClCompile Include="Core\D3D11\InputAssembler\D3D11_VertexBuffer.cpp" />
-    <ClCompile Include="Scene\Scene.cpp" />
+    <ClCompile Include="Scene\MainScene.cpp" />
     <ClCompile Include="Core\SubSystem\Graphics.cpp" />
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -323,6 +334,12 @@
     <Xml Include="Assets\Animation\Text.xml">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="GameIco.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

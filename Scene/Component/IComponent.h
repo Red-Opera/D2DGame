@@ -9,7 +9,7 @@ enum class ComponentType : uint
 	Unknown, Camera, Transform, MeshRenderer, MoveScript,
 	AIScript, Trace, Animator, BackGround, Collision,
 	GaugeBar, MonsterAttack, Bullet, PlayerAttack, MultipleAttackTypes,
-	PlayerSkill
+	PlayerSkill, Teleport
 };
 
 class IComponent

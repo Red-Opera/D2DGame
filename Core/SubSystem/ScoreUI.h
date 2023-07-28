@@ -12,12 +12,14 @@ public:
 	virtual void Update() override;
 
 	void AddScore(int score) { this->score += score; }
+	void Reflash() { changeScene = true; }
 	
 	unsigned long long GetScore() { return score; }
 
 private:
 	unsigned long long score;
 	bool firstRun = false;
+	bool changeScene = false;
 
 	std::unordered_map<std::string, std::shared_ptr<class Actor>> UIActor;
 };

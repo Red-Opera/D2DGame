@@ -14,10 +14,15 @@ public:
 	const std::map<std::string, std::shared_ptr<class Scene>>& GetAllScenes() const { return scenes; }
 	
 	class Scene* const GetCurrentScene();
+	std::string GetCurrentSceneName() { return nowSceneName; }
+
 	void SetCurrentScene(const std::string& scene_name);
+	void SetCurrentSceneName(std::string name) { nowSceneName = name; }
+
 	class Scene* const RegisterScene(const std::string& scene_name);
 
 private:
 	std::map<std::string, std::shared_ptr<class Scene>> scenes;
 	std::weak_ptr<Scene> current_scene;
+	std::string nowSceneName;
 };

@@ -177,15 +177,15 @@ void BulletComponent::Update()
 		{
 			// 타겟이 충돌한 객체 중에서 일치하는 객체를 찾음
 			auto clearTarget = std::find(bullets.begin(), bullets.end(), object.lock());
-
+			
 			if (clearTarget != bullets.end())
 			{
 				(*clearTarget)->Destroy();
 				(*clearTarget)->GetScene()->EreaseActor((*clearTarget));
 				bullets.erase(std::find(bullets.begin(), bullets.end(), object.lock()));
-
+			
 				(*toDamage)->GetComponent<GaugeBarComponent>()->SetDamegeHp(actor->GetComponent<MonsterAttackComponent>()->GetDamage());
-
+			
 				break;
 			}
 		}

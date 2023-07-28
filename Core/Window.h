@@ -4,6 +4,7 @@
 #pragma once
 
 #include "stdafx.h"
+#include "resource.h"
 
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
@@ -22,8 +23,8 @@ namespace Window
 
     inline LRESULT CALLBACK WndProc (HWND handle, UINT message, WPARAM wParam, LPARAM lParam )
     {
-        if (ImGui_ImplWin32_WndProcHandler(handle, message, wParam, lParam))
-            return true;
+       //if (ImGui_ImplWin32_WndProcHandler(handle, message, wParam, lParam))
+        //  return true;
 
         // 메세지 처리
         switch (message)
@@ -57,8 +58,8 @@ namespace Window
         wnd_class.cbWndExtra = 0;
         wnd_class.hbrBackground = static_cast<HBRUSH>(GetStockObject(WHITE_BRUSH));
         wnd_class.hCursor = LoadCursor(nullptr, IDC_ARROW);
-        wnd_class.hIcon = LoadIcon(nullptr, IDI_ERROR);
-        wnd_class.hIconSm = LoadIcon(nullptr, IDI_ERROR);
+        wnd_class.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_ICON1));
+        wnd_class.hIconSm = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_ICON1));
         wnd_class.hInstance = hInstance;
         wnd_class.lpfnWndProc = WndProc;
         wnd_class.lpszClassName = L"D2D11Game";

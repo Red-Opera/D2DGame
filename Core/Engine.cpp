@@ -34,17 +34,17 @@ Engine::Engine()
 	sizeof(io);
 
 	// Setup Dear ImGui style
-	ImGui::StyleColorsDark();
+  //ImGui::StyleColorsDark();
   //ImGui::StyleColorsLight();
 
 	// Setup Platform/Renderer backends
-    ImGui_ImplWin32_Init(Settings::Get().GetWindowHandle());
+   //ImGui_ImplWin32_Init(Settings::Get().GetWindowHandle());
 
 	auto graphics = context->GetSubSystem<Graphics>();
     ImGui_ImplDX11_Init(graphics->GetDevice(), graphics->GetDeviceContext());
 
 	// 폰트 관련
-	ImGui::GetIO().Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\HANBatang.ttf", 16.0f, NULL, ImGui::GetIO().Fonts->GetGlyphRangesKorean());
+  //ImGui::GetIO().Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\HANBatang.ttf", 16.0f, NULL, ImGui::GetIO().Fonts->GetGlyphRangesKorean());
   //ImGui::GetIO().Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\CascadiaCode.ttf", 15.0f, NULL, ImGui::GetIO().Fonts->GetGlyphRangesKorean());
 }
 
@@ -56,9 +56,9 @@ Engine::~Engine()
 void Engine::Update()
 {
 	// Start the Dear ImGui frame
-	ImGui_ImplDX11_NewFrame();
-	ImGui_ImplWin32_NewFrame();
-	ImGui::NewFrame();
+  //ImGui_ImplDX11_NewFrame();
+  //ImGui_ImplWin32_NewFrame();
+  //ImGui::NewFrame();
 
 	context->UpdateSubSystems();
 }
