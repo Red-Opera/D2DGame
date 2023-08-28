@@ -181,13 +181,13 @@ MainScene::MainScene(class Context* const context) : Scene(context)
 	animator->SetAnimationMode(AnimationMode::Play);
 
 	player->GetComponent<TransformComponent>()->SetScale(D3DXVECTOR3(70.0f, 100.0f, 1.0f));
-	player->GetComponent<TransformComponent>()->SetPosition(D3DXVECTOR3(-1050.0f, -80.0f, 0.0f));
+	player->GetComponent<TransformComponent>()->SetPosition(D3DXVECTOR3(-1050.0f, -150.0f, 0.0f));
 	player->SetName("Player");
 
 	// 슬라임
 	std::list<std::shared_ptr<Actor>> monster;
 
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 100; i++)
 	{
 		monster.emplace_back(CreateActor());
 		monster.back()->AddComponent<MeshRendererComponent>();
@@ -209,13 +209,22 @@ MainScene::MainScene(class Context* const context) : Scene(context)
 		monsterAnimator->SetAnimationMode(AnimationMode::Play);
 
 		monster.back()->GetComponent<TransformComponent>()->SetScale(D3DXVECTOR3(50.0f, 50.0f, 1.0f));
-		monster.back()->GetComponent<TransformComponent>()->SetPosition(D3DXVECTOR3(-1090.0f, 300.0f, 1.0f));
+		monster.back()->GetComponent<TransformComponent>()->SetPosition(D3DXVECTOR3(1084.0f, -250.0f, 1.0f));
 
 		monster.back()->GetComponent<TraceComponent>()->SetSpeed(15.0f);
 		monster.back()->GetComponent<TraceComponent>()->SetTarget(player);
-		monster.back()->SetName(std::to_string(i) + "GreenSlimeMonster");
 
-		monster.back()->GetComponent<MonsterAttackComponent>()->SetDamage(15.0f);
+		// 독립적인 이름을 짓기 위해 고유 번호를 붙임
+		std::string name = ""; int tempI = i;
+		for (int j = 0; j < 3; j++)
+		{
+			name = std::to_string(tempI % 10) + name;
+			tempI /= 10;
+		}
+
+		monster.back()->SetName(name + std::string("GreenSlimeMonster"));
+
+		monster.back()->GetComponent<MonsterAttackComponent>()->SetDamage(15.0f + i);
 		monster.back()->GetComponent<MonsterAttackComponent>()->SetAttackRange(200.0f);
 		monster.back()->GetComponent<MonsterAttackComponent>()->SetAttackDelay(0.75f);
 
@@ -228,7 +237,7 @@ MainScene::MainScene(class Context* const context) : Scene(context)
 	// Goblin
 	std::list<std::shared_ptr<Actor>> monster2;
 
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 100; i++)
 	{
 		monster2.emplace_back(CreateActor());
 
@@ -250,13 +259,21 @@ MainScene::MainScene(class Context* const context) : Scene(context)
 		monster2Animator->SetAnimationMode(AnimationMode::Play);
 
 		monster2.back()->GetComponent<TransformComponent>()->SetScale(D3DXVECTOR3(120.0f, 100.0f, 1.0f));
-		monster2.back()->GetComponent<TransformComponent>()->SetPosition(D3DXVECTOR3(1084.0f, 0.0f, 1.0f));
+		monster2.back()->GetComponent<TransformComponent>()->SetPosition(D3DXVECTOR3(-250.0f, -200.0f, 1.0f));
 
 		monster2.back()->GetComponent<TraceComponent>()->SetSpeed(25.0f);
 		monster2.back()->GetComponent<TraceComponent>()->SetTarget(player);
-		monster2.back()->SetName(std::to_string(i) + std::string("GoblinMonster"));
 
-		monster2.back()->GetComponent<MonsterAttackComponent>()->SetDamage(20.0f);
+		std::string name = ""; int tempI = i;
+		for (int j = 0; j < 3; j++)
+		{
+			name = std::to_string(tempI % 10) + name;
+			tempI /= 10;
+		}
+
+		monster2.back()->SetName(name + std::string("GoblinMonster"));
+
+		monster2.back()->GetComponent<MonsterAttackComponent>()->SetDamage(20.0f + i);
 		monster2.back()->GetComponent<MonsterAttackComponent>()->SetAttackRange(125.0f);	// 100.0f -> 145.0f : (플레이어 사이즈 + 몬스터 사이즈) / 2
 		monster2.back()->GetComponent<MonsterAttackComponent>()->SetAttackDelay(1.05f);
 		monster2.back()->GetComponent<MonsterAttackComponent>()->SetSizeChange(1.45f, ResizeTo::X);
@@ -271,7 +288,7 @@ MainScene::MainScene(class Context* const context) : Scene(context)
 	gaugeBar->AddComponent<GaugeBarComponent>();
 
 	BarTransform barTransform = { D3DXVECTOR2(0.0f, 100.0f), D3DXVECTOR2(0.0f, 75.0f), D3DXVECTOR2(125.0f, 13.0f), D3DXVECTOR2(125.0f, 13.0f) };
-	gaugeBar->GetComponent<GaugeBarComponent>()->SetBasicState(2000.0f, 200.0f);
+	gaugeBar->GetComponent<GaugeBarComponent>()->SetBasicState(100000.0f, 200.0f);
 	gaugeBar->GetComponent<GaugeBarComponent>()->SetBarTransform(barTransform);
 
 	gaugeBar->GetComponent<TransformComponent>()->SetParent(player->GetComponent<TransformComponent>());	// 부모 등록
@@ -289,7 +306,7 @@ MainScene::MainScene(class Context* const context) : Scene(context)
 	{
 		D3DXVECTOR2(832.0f, 217.0f), D3DXVECTOR2(739.0f, 298.0f), D3DXVECTOR2(579.0f, 298.0f),
 		D3DXVECTOR2(419.0f, 298.0f), D3DXVECTOR2(259.0f, 298.0f), D3DXVECTOR2(99.0f, 298.0f),
-		D3DXVECTOR2(835.0f, 74.0f)
+		D3DXVECTOR2(835.0f, 108.0f)
 	};
 
 	for (int i = 0; i < 7; i++)
@@ -369,7 +386,7 @@ MainScene::MainScene(class Context* const context) : Scene(context)
 	player->AddComponent<PlayerAttackComponent>();
 	player->GetComponent<PlayerAttackComponent>()->SetAttackDelay(0.35f);
 	player->GetComponent<PlayerAttackComponent>()->SetAttackRange(50.0f);
-	player->GetComponent<PlayerAttackComponent>()->SetDamage(2000.0f);
+	player->GetComponent<PlayerAttackComponent>()->SetDamage(100.0f);
 	player->GetComponent<PlayerAttackComponent>()->SetStyleSpeed(PlayerBulletStyle::Short);
 
 	player->AddComponent<PlayerSkillComponent>();
@@ -444,16 +461,16 @@ MainScene::~MainScene()
 void MainScene::Update()
 {
 	// 몬스터 1개씩 활성화
-	if ((onMonster < 10) && (nowDelay < 0))
+	if ((onMonster < 100) && (nowDelay < 0))
 	{
 		BarTransform barTransform = { D3DXVECTOR2(0.0f, 100.0f), D3DXVECTOR2(0.0f, 75.0f), D3DXVECTOR2(125.0f, 13.0f), D3DXVECTOR2(125.0f, 13.0f) };
 		static int count = 1;
 
 		for (const auto& monster : actors)
 		{
-			if (monster->GetName().size() < 18) continue;
+			if (monster->GetName().size() < 20) continue;
 
-			if ((monster->GetName().substr(1) == "GreenSlimeMonster") && !monster->IsActive())
+			if ((monster->GetName().substr(3) == "GreenSlimeMonster") && !monster->IsActive())
 			{
 				monster->SetActive(true);
 
@@ -462,7 +479,7 @@ void MainScene::Update()
 				gaugeBar2->AddComponent<TransformComponent>();
 				gaugeBar2->AddComponent<GaugeBarComponent>();
 
-				gaugeBar2->GetComponent<GaugeBarComponent>()->SetBasicState(250.0f, 25.0f);
+				gaugeBar2->GetComponent<GaugeBarComponent>()->SetBasicState(250.0f + count * 2, 25.0f);
 				gaugeBar2->GetComponent<GaugeBarComponent>()->SetBarTransform(barTransform);
 
 				gaugeBar2->GetComponent<TransformComponent>()->SetParent(monster->GetComponent<TransformComponent>());	// 부모 등록
@@ -477,9 +494,9 @@ void MainScene::Update()
 
 		for (const auto& monster : actors)
 		{
-			if (monster->GetName().size() < 14) continue;
+			if (monster->GetName().size() < 16) continue;
 
-			if ((monster->GetName().substr(1) == "GoblinMonster") && !monster->IsActive())
+			if ((monster->GetName().substr(3) == "GoblinMonster") && !monster->IsActive())
 			{
 				monster->SetActive(true);
 
@@ -490,7 +507,7 @@ void MainScene::Update()
 				gaugeBar3.back()->AddComponent<TransformComponent>();
 				gaugeBar3.back()->AddComponent<GaugeBarComponent>();
 
-				gaugeBar3.back()->GetComponent<GaugeBarComponent>()->SetBasicState(100.0f, 50.0f);
+				gaugeBar3.back()->GetComponent<GaugeBarComponent>()->SetBasicState(100.0f + count, 50.0f);
 				gaugeBar3.back()->GetComponent<GaugeBarComponent>()->SetBarTransform(barTransform);
 
 				gaugeBar3.back()->GetComponent<TransformComponent>()->SetParent(monster->GetComponent<TransformComponent>());	// 부모 등록
@@ -506,7 +523,7 @@ void MainScene::Update()
 		}
 
 		onMonster++;
-		nowDelay = 1.0f;
+		nowDelay = 0.5f;
 	}
 	else nowDelay -= timer->GetDeltaTimeSEC();
 

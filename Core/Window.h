@@ -13,14 +13,6 @@ namespace Window
     static HINSTANCE global_instance; // 인스턴스 정보 
     static HWND global_handle;        // 핸들의 정보
 
-    /*
-        - WndProc함수 : WinAPI의 처리 함수
-            1. inline : 컴파일타임 때 정보를 불러온다. (빠르다, 무겁다)
-            2. CALLBACK == __stdcall(callee -> API)
-               cdecl(caller -> C)
-            3. CALLBACK : 사용자가 호출하는 것이 아니라 메시지로 인하여 운영체제가 호출한다는 뜻(Call at the back) -> __stdcall과 의미상 다르기에 CALLBACK 으로 처리
-    */
-
     inline LRESULT CALLBACK WndProc (HWND handle, UINT message, WPARAM wParam, LPARAM lParam )
     {
        //if (ImGui_ImplWin32_WndProcHandler(handle, message, wParam, lParam))
@@ -89,6 +81,7 @@ namespace Window
         );
 
         global_instance = hInstance;
+        MoveWindow(global_handle, 0, 0, width, height, false);
 
         // 생성 체크 
         assert(global_handle != nullptr);

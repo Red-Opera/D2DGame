@@ -62,7 +62,7 @@ WidePlainScene::WidePlainScene(class Context* const context) : Scene(context)
 	player->GetComponent<TransformComponent>()->SetScale(D3DXVECTOR3(70.0f, 100.0f, 1.0f));
 	player->GetComponent<TransformComponent>()->SetPosition(D3DXVECTOR3(0.0f, 0.0f, 0.0f));
 	player->SetName("Player");
-
+	
 	// 슬라임
 	std::list<std::shared_ptr<Actor>> monster;
 
@@ -143,14 +143,14 @@ WidePlainScene::WidePlainScene(class Context* const context) : Scene(context)
 		monster2.back()->GetComponent<BulletComponent>()->SetStyleSpeed(BulletStyle::Short, 1.0f);
 		monster2.back()->SetActive(false);
 	}
-
+	
 	// 플레이어 체력 바
 	std::shared_ptr<Actor> gaugeBar = CreateActor();
 	gaugeBar->AddComponent<TransformComponent>();
 	gaugeBar->AddComponent<GaugeBarComponent>();
 
 	BarTransform barTransform = { D3DXVECTOR2(0.0f, 100.0f), D3DXVECTOR2(0.0f, 75.0f), D3DXVECTOR2(125.0f, 13.0f), D3DXVECTOR2(125.0f, 13.0f) };
-	gaugeBar->GetComponent<GaugeBarComponent>()->SetBasicState(2000.0f, 200.0f);
+	gaugeBar->GetComponent<GaugeBarComponent>()->SetBasicState(500.0f, 200.0f);
 	gaugeBar->GetComponent<GaugeBarComponent>()->SetBarTransform(barTransform);
 
 	gaugeBar->GetComponent<TransformComponent>()->SetParent(player->GetComponent<TransformComponent>());	// 부모 등록
@@ -162,12 +162,12 @@ WidePlainScene::WidePlainScene(class Context* const context) : Scene(context)
 	player->AddComponent<PlayerAttackComponent>();
 	player->GetComponent<PlayerAttackComponent>()->SetAttackDelay(0.35f);
 	player->GetComponent<PlayerAttackComponent>()->SetAttackRange(50.0f);
-	player->GetComponent<PlayerAttackComponent>()->SetDamage(2000.0f);
+	player->GetComponent<PlayerAttackComponent>()->SetDamage(50.0f);
 	player->GetComponent<PlayerAttackComponent>()->SetStyleSpeed(PlayerBulletStyle::Short);
 
 	player->AddComponent<PlayerSkillComponent>();
 	player->GetComponent<PlayerSkillComponent>()->SetManaComsum(8);
-
+	
 	for (const auto& object : monster)
 	{
 		player->GetComponent<CollisionComponent>()->SetCollistionTarget(object);

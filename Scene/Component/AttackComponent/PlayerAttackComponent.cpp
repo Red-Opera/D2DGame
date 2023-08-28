@@ -279,15 +279,18 @@ void PlayerAttackComponent::Update()
 	// 플레이어의 피격 스프라이트와 충돌한 몬스터 데미지 처리
 	for (const auto& attack : shot)
 	{
-		if (!(attack.second->GetComponent<CollisionComponent>()->IsCollision())) continue;
+		std::weak_ptr<CollisionComponent> collisionComponent = attack.second->GetComponent<CollisionComponent>();
+		
+		if (!collisionComponent.lock()->IsCollision()) continue;
 		if (isDamage || !attack.second->IsActive()) continue;
 
-		// 피격 스프라이트가 다른 물체와 충돌했을 경우
-		const auto& collision = attack.second->GetComponent<CollisionComponent>()->GetCollisionObject();
+		// 충돌 체크하고 피격 스프라이트가 다른 물체와 충돌했는지 체크
+		collisionComponent.lock()->Update();
+		const auto& collision = collisionComponent.lock()->GetCollisionObject();
 
 		for (auto monster = collision.begin(); monster != collision.end();)
 		{
-			if (monster->expired())
+			if (monster->expired() || monster->lock()->GetName() == "" || !(*monster).lock()->IsActive())
 			{
 				monster++;
 				continue;
@@ -295,9 +298,9 @@ void PlayerAttackComponent::Update()
 
 			for (const auto& child : (*monster).lock()->GetComponent<TransformComponent>()->GetChilds())
 			{
-				if (child.expired() || child.lock()->GetActor()->GetName().size() < 8)
+				if (child.expired())
 					continue;
-
+				
 				// 게이지바가 붙은 객체에 데미지를 줌
 				if (child.lock()->GetActor()->GetName().substr(0, 8) == "GaugeBar")
 					child.lock()->GetActor()->GetComponent<GaugeBarComponent>()->SetDamegeHp(damage);
@@ -307,6 +310,7 @@ void PlayerAttackComponent::Update()
 				isDamage = true;
 		}
 
+		// 총알이 몬스터에 맞았을 경우 제거
 		if (attack.second->GetComponent<MultipleAttackTypesComponent>()->GetAttackType() == AttackType::Long)
 			shot.erase(attack.first);
 	}
@@ -354,7 +358,7 @@ void PlayerAttackComponent::Update()
 
 		for (auto monster = collision.begin(); monster != collision.end();)
 		{
-			if (monster->expired())
+			if (monster->expired() || monster->lock()->GetName() == "" || !(*monster).lock()->IsActive())
 			{
 				monster++;
 				continue;

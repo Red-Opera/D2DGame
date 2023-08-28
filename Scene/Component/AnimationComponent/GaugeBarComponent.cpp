@@ -69,8 +69,9 @@ void GaugeBarComponent::Update()
 			context->GetSubSystem<ScoreUI>()->AddScore(1);
 
 			std::shared_ptr animator = parent->GetComponent<AnimatorComponent>();
+			std::string name = parent->GetName();
 
-			if (parent->GetName().substr(1) == "GreenSlimeMonster")
+			if (name.substr(3) == "GreenSlimeMonster" || name.substr(1) == "GreenSlimeMonster")
 				parent->GetComponent<TransformComponent>()->SetScale(D3DXVECTOR3(65.0f, 50.0f, 1.0f));
 
 			else

@@ -25,7 +25,7 @@ void CollisionComponent::Update()
 
 	for (auto& tar : target)
 	{
-		if (tar.expired()) continue;
+		if (tar.expired() || !tar.lock()->IsActive()) continue;
 
 		// Ãæµ¹ °´Ã¼·Î ¸¸µé °´Ã¼ÀÇ Á¤º¸¸¦ °¡Á®¿È
 		targetPos = tar.lock()->GetTransform()->GetPosition();
