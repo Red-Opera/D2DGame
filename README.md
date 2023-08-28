@@ -14,9 +14,9 @@ DirectX와 C++로 만든 2차원 슈팅 게임
 <hr>
 <h2 id="Play">게임 시연 영상</h2>
 <a href="https://www.youtube.com/watch?v=qiwBTG6fsT4">
- <img src="https://github.com/Red-Opera/D2DGame/assets/121187608/1f052818-f137-4a28-9eba-aafcc0a445d8">
+    <img src="https://img.youtube.com/vi/qiwBTG6fsT4/0.jpg" width="100%" height="100%"/>
 </a>
-<p>영상을 클릭하면 재생됩니다.</p>
+<p>이미지를 클릭하면 재생됩니다.</p>
 
 <hr>
 <h2 id="Outline">게임 개요</h2>
