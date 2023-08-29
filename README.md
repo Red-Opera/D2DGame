@@ -4,15 +4,15 @@ DirectX와 C++로 만든 2차원 슈팅 게임
 
 ## 목차
 <ol>
-    <b><li><a href="#Play">게임 시연 영상</a></li></b>
+    <b><li><a href="#Play">게임 포트폴리오 영상</a></li></b>
     <b><li><a href="#Outline">게임 개요</a></li></b>
-    <b><li>주요 기능</li></b>
+    <b><li><a href="#Func">주요 기능</a></li></b>
     <b><li>도전 과제</li></b>
     <b><li>결과 및 성과</li></b>
 </ol>
 
 <hr>
-<h2 id="Play">게임 시연 영상</h2>
+<h2 id="Play">게임 포트폴리오 영상</h2>
 <a href="https://www.youtube.com/watch?v=qiwBTG6fsT4">
     <img src="https://img.youtube.com/vi/qiwBTG6fsT4/0.jpg" width="100%" height="100%"/>
 </a>
@@ -23,7 +23,7 @@ DirectX와 C++로 만든 2차원 슈팅 게임
 <ul>
     <li>
         <h3>Game Genre</h3>
-        슈팅 게임
+        2D 슈팅 게임
     </li> 
     <li>
         <h3>Development Stack</h3>
@@ -39,4 +39,20 @@ DirectX와 C++로 만든 2차원 슈팅 게임
         <h3>Development Member</h3>
         서정현
     </li>
+    <li>
+        <h3>Target Platform</h3>
+        <img src="https://img.shields.io/badge/Windows-0078D4?style=flat&logo=windows&logoColor=white"/></p>
+    </li>
 </ul>
+
+<hr>
+<h2 id="Func">주요 기능</h2>
+<ins><h2>위 내용은 게임 포트폴리오 영상과 내용이 일치합니다</h2></ins>
+
+<h3>플레이어 컨트롤</h3>
+
+![image](https://github.com/Red-Opera/D2DGame/assets/121187608/6b3ad038-0df7-4218-ada0-9dc10d67c88b)
+
+<table>
+    <tr>
+        <td>
