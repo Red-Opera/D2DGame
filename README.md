@@ -47,12 +47,33 @@ DirectX와 C++로 만든 2차원 슈팅 게임
 
 <hr>
 <h2 id="Func">주요 기능</h2>
-<ins><h2>위 내용은 게임 포트폴리오 영상과 내용이 일치합니다</h2></ins>
+<h4><mark><em>위 내용은 게임 포트폴리오 영상과 내용이 일치합니다</em></mark></h4>
 
 <h3>플레이어 컨트롤</h3>
 
 ![image](https://github.com/Red-Opera/D2DGame/assets/121187608/6b3ad038-0df7-4218-ada0-9dc10d67c88b)
 
-<table>
-    <tr>
-        <td>
+<table border="1px">
+    <tr style="text-align:center">
+        <td style="font-weight: bold;">컨트롤 키</td>
+        <td>1</td>
+        <td>2</td>
+        <td>W</td>
+        <td>A</td>
+        <td>S</td>
+        <td>D</td>
+        <td>C</td>
+        <td>마우스 왼쪽 클릭</td>
+    </tr>
+    <tr style="text-align:center">
+        <td style="font-weight: bold;">기능</td>
+        <td>단거리 무기로 교체</td>
+        <td>장거리 무기로 교체</td>
+        <td>위로 이동</td>
+        <td>오른쪽 이동</td>
+        <td>아래로 이동</td>
+        <td>오른쪽으로 이동</td>
+        <td>플레이어 스킬 사용</td>
+        <td>일반 공격 사용</td>
+    </tr>
+</table>
