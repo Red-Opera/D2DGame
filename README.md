@@ -49,8 +49,20 @@ DirectX와 C++로 만든 2차원 슈팅 게임
 <h2 id="Func">주요 기능</h2>
 <h4><mark><em>위 내용은 게임 포트폴리오 영상과 내용이 일치합니다</em></mark></h4>
 
-<h3>플레이어 컨트롤</h3>
+<h3>플레이어 UI</h3>
+
+<img src="https://github.com/Red-Opera/D2DGame/assets/121187608/4b73204d-5cc5-4f27-9e1f-edb5aa821f52" width="100%" height="100%"/>
+먼저 왼쪽 위에 보면 Kills라고 써있는 Score UI가 표시됩니다. 점수는 몬스터를 처지하면 오르도록 제작했습니다.<br><br><br><br>
+
+<img src="https://github.com/Red-Opera/D2DGame/assets/121187608/8f07fde8-26b8-4d51-9223-bc1957afff27" width="100%" height="100%"/>
+Kill 점수는 총 10자리까지 표시할 수 있어 최대 100억 킬 전까지 표시할 수 있습니다.<br><br><br><br>
+
+<img src="https://github.com/Red-Opera/D2DGame/assets/121187608/f2b35a17-5b12-4dd6-b1c0-797c99fbdd0f" width="100%" height="100%"/>
+왼쪽 아래 화면을 보면 키보드와 마우스 UI가 있습니다.
+이 UI는 1, 2, W, A, S, D, C와 마우스로 구성되며 해당 키를 누르게 될 경우 눌린 UI가 표시되도록 제작했습니다.<br><br><br><br>
+
+<h3>플레이어의 컨트롤</h3>
 
 ![image](https://github.com/Red-Opera/D2DGame/assets/121187608/6b3ad038-0df7-4218-ada0-9dc10d67c88b)
 <img src="https://github.com/Red-Opera/D2DGame/assets/121187608/96af0a4e-bf6f-44b3-b818-e4ba0f8c9040" width="100%" height="100%"/>
-플레이어는 위 테이블에 적혀 있는 
+플레이어는 위 테이블에 적혀 있는 키보드나 마우스를 누르게 될 경우 키에 대응하는 기능을 수행하도록 제작했습니다.
