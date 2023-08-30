@@ -63,6 +63,26 @@ Kill 점수는 총 10자리까지 표시할 수 있어 최대 100억 킬 전까�
 
 <h3>플레이어의 컨트롤</h3>
 
-![image](https://github.com/Red-Opera/D2DGame/assets/121187608/6b3ad038-0df7-4218-ada0-9dc10d67c88b)
 <img src="https://github.com/Red-Opera/D2DGame/assets/121187608/96af0a4e-bf6f-44b3-b818-e4ba0f8c9040" width="100%" height="100%"/>
 플레이어는 위 테이블에 적혀 있는 키보드나 마우스를 누르게 될 경우 키에 대응하는 기능을 수행하도록 제작했습니다.
+
+<h3>플레이어</h3>
+
+<img src="https://github.com/Red-Opera/D2DGame/assets/121187608/6719ca93-0903-4256-a351-b12eceffc2e1" width="100%" height="100%"/>
+플레이어는 체력 바와 마나바가 존재하여 플레이어의 상태를 실시간으로 확인할 수 있습니다.
+
+
+<h4>플레이어의 상태</h4>
+플레이어는 Idle, Move, Attack로 3가지의 상태를 가집니다. 상태마다 다른 스프라이트를 직접 제작하여 생동감 있는 애니메이션을 구현했습니다.<br><br>
+
+https://github.com/Red-Opera/D2DGame/assets/121187608/8b40125b-1454-4d36-bd17-ab534e81d92f 
+
+<br>
+Idle 상태는 아무것도 하지 않을 때 발생하며 캐릭터가 숨 쉬는 것처럼 애니메이션을 제작했습니다.<br><br>
+
+
+https://github.com/Red-Opera/D2DGame/assets/121187608/907fbb27-e76f-44cb-8d0e-d3a95e172ede
+
+<br>
+Move 상태는 W, A, S, D 키를 눌렸을 때 캐릭터가 해당 방향으로 움직이며 해당 방향 맞는 애니메이션이 실행됩니다.
+플레이어를 따라다니는 카메라를 자연스럽게 구현하여 플레이어의 움직임을 잘 따라가도록 했습니다.
