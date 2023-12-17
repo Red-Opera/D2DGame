@@ -75,13 +75,12 @@ Kill 점수는 총 10자리까지 표시할 수 있어 최대 100억 킬 전까�
 <h4>플레이어의 상태</h4>
 플레이어는 Idle, Move, Attack로 3가지의 상태를 가집니다. 상태마다 다른 스프라이트를 직접 제작하여 생동감 있는 애니메이션을 구현했습니다.<br><br>
 
-https://github.com/Red-Opera/D2DGame/assets/121187608/8b40125b-1454-4d36-bd17-ab534e81d92f 
+<img src="https://github.com/Red-Opera/D2DGame/assets/121187608/b24c57b6-8ab9-4633-a0f2-dd21782be459" width="100%" height="100%"/>
 
 <br>
 Idle 상태는 아무것도 하지 않을 때 발생하며 캐릭터가 숨 쉬는 것처럼 애니메이션을 제작했습니다.<br><br>
 
-
-https://github.com/Red-Opera/D2DGame/assets/121187608/907fbb27-e76f-44cb-8d0e-d3a95e172ede
+<img src="https://github.com/Red-Opera/D2DGame/assets/121187608/4d70f403-2629-434a-8ab1-3eb30fc7373c" width="100%" height="100%"/>
 
 <br>
 Move 상태는 W, A, S, D 키를 눌렸을 때 캐릭터가 해당 방향으로 움직이며 해당 방향 맞는 애니메이션이 실행됩니다.
@@ -91,26 +90,23 @@ Move 상태는 W, A, S, D 키를 눌렸을 때 캐릭터가 해당 방향으로 
 
 Attack 상태는 왼쪽 마우스 클릭했을 때 전환됩니다. 플레이어의 무기에는 장거리와 단거리 두 가지가 존재합니다.<br><br>
 
-
-
-https://github.com/Red-Opera/D2DGame/assets/121187608/c9025ce8-c410-47d4-ae0e-d7c0d5845042
+<img src="https://github.com/Red-Opera/D2DGame/assets/121187608/0226227c-e43d-45b7-a0cd-e0eb051f508e" width="100%" height="100%"/>
 
 
 단거리 공격은 플레이어의 정면에서 칼 스프라이트와 피격 스프라이트가 재생됩니다. 피격 스프라이트가 재생되는 범위 안에 있는 몬스터들이 플레이어 공격력만큼 데미지를 받도록 설정했습니다. <br><br>
 
 
-
-https://github.com/Red-Opera/D2DGame/assets/121187608/f9c8094a-51af-448a-996c-eafc83436f33
+<img src="https://github.com/Red-Opera/D2DGame/assets/121187608/9d981ce6-d912-482f-9eb7-02f96ebb0ece" width="100%" height="100%"/>
 
 
 장거리 공격은 플레이어가 화면 기준으로 마우스 방향에 따라 총이 조준되도록 구현했습니다. 마우스 왼쪽을 클릭할 경우 총알이 생성되어 앞으로 나아갑니다. 총알이 몬스터에 맞았을 경우 해당 몬스터의 체력이 감소하고 총알이 사라지도록 제작했습니다. 또한, 장거리 공격은 단거리 공격과 달리 스킬이 존재하고 C 버튼을 눌렸을 경우 총알이 여러 방향으로 나가는 스킬을 구현했습니다. 
 
-<table>
+<table border="2">
     <td>
-        <img src="https://github.com/Red-Opera/D2DGame/assets/121187608/5bf0a7ad-e6bc-45ae-b0b0-c0c215e94851"/>
+        <img src="https://github.com/Red-Opera/D2DGame/assets/121187608/36c85e30-d0d1-4814-8221-64bf0810517e"/>
     </td>
     <td>
-        <img src="https://github.com/Red-Opera/D2DGame/assets/121187608/a22d7d93-6e0e-4bf9-afd1-cb703f7e8c87"/>
+        <img src="https://github.com/Red-Opera/D2DGame/assets/121187608/e49add28-cd92-463a-bc5e-1a4cc63ed5a2"/>
     </td>
 </table>
 왼쪽 : 장거리 무기를 소지 중인 경우, 오른쪽 : 단거리 무기를 소지 중인 경우<br><br>
@@ -125,10 +121,39 @@ https://github.com/Red-Opera/D2DGame/assets/121187608/f9c8094a-51af-448a-996c-ea
 
 몬스터는 단거리와 장거리 공격 유닛을 제작했습니다. 몬스터는 플레이어와 마찬가지로 체력바와 마나 바가 있습니다.<br><br>
 
-<img src="https://github.com/Red-Opera/D2DGame/assets/121187608/d5a362fb-4c13-4498-95d0-d8d23d7fd106" width="100%" height="100%"/>
+<img src="https://github.com/Red-Opera/D2DGame/assets/121187608/158c9a1e-2bba-43d3-b437-53a48415c58b" width="100%" height="100%"/>
 
 장거리 몬스터는 플레이어뿐만이 아니라 지형도 충돌하도록 구현했습니다. 단거리 몬스터는 길막방지를 위해 오브젝트까리 충돌하지 않도록 설정했습니다.
 
-<img src="https://github.com/Red-Opera/D2DGame/assets/121187608/90c8aeb2-3d19-4600-8a22-a851107e410e" width="100%" height="100%"/>
+<h2>몬스터 상태</h2>
+몬스터 상태는 Move, Attack, Death 상태가 존재합니다. 
+<br>
+<img src="https://github.com/Red-Opera/D2DGame/assets/121187608/1615179f-e408-49d7-9ea8-cc73d44ceb8a" width="100%" height="100%"/>
+몬스터는 생성하자마자 Move 상태가 되어 플레이어를 쫒아옵니다. 
+<br>
+<br>
 
-몬스터 상태는 Move, Attack, Death 상태가 존재합니다. 몬스터는 생성하자마자 Move 상태가 되어 플레이어를 쫒아옵니다. 장거리 몬스터는 플레이어가 일정한 거리 이내로 들어올 경우 Attack 상태가 되어 플레이어 방향을 탄알을 발사하도록 설정했습니다. 단거리 몬스터는 플레이어와 닿을 경우 공격 애니메이션을 실행하면서 인스턴스 없는 공격하도록 설정했습니다. 몬스터들은 체력이 0 이하가 되면 죽는 애니메이션을 실행하며 사라집니다.
+<table border="2">
+    <td>
+        <img src="https://github.com/Red-Opera/D2DGame/assets/121187608/437cbe86-5e15-4c4b-8da0-b7a68fbe5578" width="450px" height="100%"/>
+    </td>
+    <td>
+        <img src="https://github.com/Red-Opera/D2DGame/assets/121187608/adbc2c5c-a195-475f-bb94-1d84b89ee6d0" width="450px" height="100%"/>
+    </td>
+</table>
+
+장거리 몬스터는 플레이어가 일정한 거리 이내로 들어올 경우 Attack 상태가 되어 플레이어 방향을 탄알을 발사하도록 설정했습니다. 
+단거리 몬스터는 플레이어와 닿을 경우 공격 애니메이션을 실행하면서 인스턴스 없는 공격하도록 설정했습니다. 
+
+<img src="https://github.com/Red-Opera/D2DGame/assets/121187608/11cc2fba-2ef2-480d-b440-750d40417293" width="100%" height="100%"/>
+
+몬스터들은 체력이 0 이하가 되면 죽는 애니메이션을 실행하며 사라집니다.
+
+<img src="https://github.com/Red-Opera/D2DGame/assets/121187608/ab9e4c07-f27f-4d86-91d3-9f99091fe569" width="100%" height="100%"/>
+
+
+몬스터를 처치했을 때 왼쪽 위의 UI의 점수가 1점 상승하는 것을 확인할 수 있습니다.
+
+<img src="https://github.com/Red-Opera/D2DGame/assets/121187608/e5f3ae3d-1f22-4794-a008-686bb11df69f" width="100%" height="100%"/>
+
+지형 오른쪽 아래에 내려가면 다른 맵으로 이동할 수 있습니다.
